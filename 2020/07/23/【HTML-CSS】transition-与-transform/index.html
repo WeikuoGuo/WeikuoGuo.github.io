@@ -20,17 +20,22 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content>
-    <meta property="og:type" content="website">
-<meta property="og:title" content="虾仁饭的异想世界">
-<meta property="og:url" content="https://weikuoguo.github.io/archives/2020/index.html">
+    <meta name="description" content="transition 过渡 transition-property: 规定设置过渡效果的CSS属性的名称   使用：transition-property: width/height/color/all 指定宽/高/颜色/所有属性过渡  transition-duration: 规定完成过渡效果要多少秒或毫秒  transition-delay: 定义过渡效果何时开始。（既可以延迟（数值为正数）也">
+<meta name="keywords" content="HTML&#x2F;CSS学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【HTML&#x2F;CSS】transition 与 transform">
+<meta property="og:url" content="https://weikuoguo.github.io/2020/07/23/【HTML-CSS】transition-与-transform/index.html">
 <meta property="og:site_name" content="虾仁饭的异想世界">
+<meta property="og:description" content="transition 过渡 transition-property: 规定设置过渡效果的CSS属性的名称   使用：transition-property: width/height/color/all 指定宽/高/颜色/所有属性过渡  transition-duration: 规定完成过渡效果要多少秒或毫秒  transition-delay: 定义过渡效果何时开始。（既可以延迟（数值为正数）也">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-07-23T13:00:52.905Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="虾仁饭的异想世界">
+<meta name="twitter:title" content="【HTML&#x2F;CSS】transition 与 transform">
+<meta name="twitter:description" content="transition 过渡 transition-property: 规定设置过渡效果的CSS属性的名称   使用：transition-property: width/height/color/all 指定宽/高/颜色/所有属性过渡  transition-duration: 规定完成过渡效果要多少秒或毫秒  transition-delay: 定义过渡效果何时开始。（既可以延迟（数值为正数）也">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>虾仁饭の异想世界.</title>
+    <title>【HTML/CSS】transition 与 transform · 虾仁饭の异想世界.</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -211,12 +216,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >虾仁饭の异想世界.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">【HTML/CSS】transition 与 transform</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>虾仁饭の异想世界.</a>
 </header>
@@ -228,24 +244,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            【HTML/CSS】transition 与 transform
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "HTML/CSS学习笔记">HTML/CSS学习笔记</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">434</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/07/23</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -346,117 +412,106 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/23/【HTML-CSS】transition-与-transform/" >
-            
-                <span>【HTML/CSS】transition 与 transform</span>
-        </a>
-        <div class="abstract-content">
-            transition 过渡
-transition-property: 规定设置过渡效果的CSS属性的名称
-  使用：transition-property: width/height/color/all 指定宽/高/颜色/所有属性过渡
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="transition-过渡"><a href="#transition-过渡" class="headerlink" title="transition 过渡"></a>transition 过渡</h1><ul>
+<li><p><strong>transition-property</strong>: 规定设置过渡效果的CSS属性的名称</p>
+<p>  使用：transition-property: width/height/color/all 指定<strong>宽/高/颜色/所有</strong>属性过渡</p>
+</li>
+<li><p><strong>transition-duration</strong>: 规定完成过渡效果要多少秒或毫秒</p>
+</li>
+<li><p><strong>transition-delay</strong>: 定义过渡效果何时开始。（既可以延迟（数值为正数）也可以提前（数值为负数））</p>
+</li>
+<li><p><strong>transition-timing-function</strong>: 规定速度效果的速度曲线</p>
+<ul>
+<li>Linear 线性变化</li>
+<li>ease (默认值)</li>
+<li>ease-in </li>
+<li>ease-out </li>
+<li>ease-in-out</li>
+<li>cubic-bezier (<a href="http://cubic-bezier.com" target="_blank" rel="noopener">http://cubic-bezier.com</a>)</li>
+</ul>
+</li>
+<li><p><strong>transition 复合样式</strong>： transition: all 1s 2s linear</p>
+<ul>
+<li>duration时间在前，delay时间在后，只写一个默认duration</li>
+<li>property不写默认all</li>
+<li>timing-function不写默认ease</li>
+</ul>
+</li>
+</ul>
+<h1 id="transform变形"><a href="#transform变形" class="headerlink" title="transform变形"></a>transform变形</h1><ul>
+<li><p><strong>translate 位移</strong></p>
+<p>  复合样式使用：transform: translate(100px, 0)</p>
+<p>  单一样式：teanslateX, translateY, translateZ(3d)</p>
+</li>
+<li><p><strong>scale 缩放</strong>：值是一个比例，正常大小为1，放大为原来的2倍是2，缩小为原来的一半是0.5，以此类的。会以当前元素中心点进行缩放。</p>
+<p>  复合样式使用：transform: scale(2,0.5); (宽高缩放比例相同的时候可以只写一个值)</p>
+<p>  单一样式：scaleX, scaleY, scaleZ(3d）</p>
+</li>
+<li><p><strong>rotate 旋转</strong>：旋转的值单位是角度(deg)，弧度。正值为顺时针，负值为逆时针。</p>
+<p>  复合样式使用：transform: rotate(40deg)</p>
+<p>  单一样式：rotateX(3d), rotateY(3d), rotateZ </p>
+</li>
+</ul>
+<ul>
+<li><p><strong>skew 斜切</strong></p>
+<p>  复合样式使用：transform: skew(40deg, 40deg)</p>
+<p>  单一样式：skewX, skewY</p>
+</li>
+<li><p><strong>transform的注意事项</strong>：</p>
+<ol>
+<li>变形操作不会影响到其它元素。</li>
+<li>变形操作只能添加给块元素，不能添加给内联元素。、</li>
+<li>复合写法，可以同时添加多个变形操作，但<em>执行是有顺序的</em>，<u>先执行后面的操作再执行前面的操作</u>。</li>
+<li>可以利用transform-origin设置基点。transform-origin：0 0</li>
+</ol>
+</li>
+</ul>
 
-transition-duration: 规定完成过渡效果要多少秒或毫秒
-
-transition-delay: 定义过渡效果何时开始。（既可以延迟（数值为正数）也可以提前（数值为负数））
-
-transition-timing-function: 规定速度效果的速度曲线
-
-Linear 线性变化
-ease (默认值)
-ease-in 
-ease-out 
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/23</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "HTML/CSS学习笔记">HTML/CSS学习笔记</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/21/关于堆肥，你要知道这些事/" >
-            
-                <span>关于堆肥，你要知道这些事</span>
-        </a>
-        <div class="abstract-content">
-            什么是堆肥制作堆肥，是一种将厨余垃圾转化成有机肥料的方法。本质上是指利用自然界广泛存在的微生物，有控制地促进固体废物中可降解有机物转化为稳定的腐殖质的生物化学过程。我们在园艺商店或网上购买的腐叶土，其实就是在自然环境或人工环境下落叶腐败后产生的堆肥。
-为什么选择堆肥
-省钱，要知道市面上腐叶土的价格不算贵但也不便宜，如果少量使用感觉不出来价格高低，但对于花园土壤改良或者需要每年换盆的植物，这无疑是一笔很大的开销。
-
-环保，用于堆肥的枯枝败叶以及厨余垃圾，如果丢弃，最终可能会被送去焚烧或填埋，这些过程会释放大量温室气体，对于环境是一种负担。而堆肥会将材料中的许多碳元素固定在最终产生的腐殖质中...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://weikuoguo.github.io">W.K.</a>
+            <p>原文链接：<a href="https://weikuoguo.github.io/2020/07/23/【HTML-CSS】transition-与-transform/">https://weikuoguo.github.io/2020/07/23/【HTML-CSS】transition-与-transform/</a>
+            <p>发表日期：<a href="https://weikuoguo.github.io/2020/07/23/【HTML-CSS】transition-与-transform/">July 23rd 2020, 10:38:46 am</a>
+            <p>更新日期：<a href="https://weikuoguo.github.io/2020/07/23/【HTML-CSS】transition-与-transform/">July 23rd 2020, 9:00:52 pm</a>
+            <p>版权声明：Copyright © 2019-2020 W.K. All rights reserved.</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "植物">植物</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/20/你所了解的一箭之遥，可能并非它的全部/" >
-            
-                <span>你所了解的一箭之遥，可能并非它的全部</span>
-        </a>
-        <div class="abstract-content">
-            第一章：相遇说实话，对于一箭之遥这个品种关注，是从去年夏天开始的。仙珍交易板上忽然看到了这么一个陌生的名字难免要多看两眼。百度了一下，通篇全是紫薰*灵耀，心理难免鄙夷，想到：“国内的人真是越来越能炒作了，不就是一个紫薰*灵耀吗，起了个名字就开始忽悠”…
-到这里，可能是绝大多数的花友对于“一箭之遥”这个品种的最初也是最后的印象，在80%的花友心中，一箭之遥=紫薰X灵耀。
-第二章：相知然而事情会有那么简单吗，若一箭之遥只是单纯的紫薰X灵耀，那么今天也就不会有这么一篇帖子对于它进行讨论了。时间来到夏末初秋，在淘宝上浏览的时候忽然“一箭之遥”这个名字再次映入了我的眼帘，打开链接一看，50元4个红...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "植物">植物</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/07/21/关于堆肥，你要知道这些事/" title= "关于堆肥，你要知道这些事">
+                    <div class="prevTitle">关于堆肥，你要知道这些事</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -536,6 +591,24 @@ ease-out
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#transition-过渡"><span class="toc-number">1.</span> <span class="toc-text">transition 过渡</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#transform变形"><span class="toc-number">2.</span> <span class="toc-text">transform变形</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -712,6 +785,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
