@@ -20,21 +20,21 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content>
-    <meta name="description" content=".l{float: left;}     .r{float: right}     .clear::after{content:&quot;&quot;; clear: both; display: block;}      .demo1 .box1{width: 200px;height: 200px;border: 1px black solid; margin: 30px auto;}     .de">
+    <meta name="description" content="animation 动画基本语法 animation-name: 设置动画的名字（自定义的） animation-duration： 动画的持续时间  animation-delay: 动画的延迟时间  animation-iteration-count: 动画的重复次数，默认值为1，infinite无限次数 animation-timing-function: 动画的运动形式  注：  运动结束">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【HTML&#x2F;CSS】animation动画">
 <meta property="og:url" content="https://weikuoguo.github.io/2020/07/25/【HTML-CSS】animation动画/index.html">
 <meta property="og:site_name" content="虾仁饭的异想世界">
-<meta property="og:description" content=".l{float: left;}     .r{float: right}     .clear::after{content:&quot;&quot;; clear: both; display: block;}      .demo1 .box1{width: 200px;height: 200px;border: 1px black solid; margin: 30px auto;}     .de">
+<meta property="og:description" content="animation 动画基本语法 animation-name: 设置动画的名字（自定义的） animation-duration： 动画的持续时间  animation-delay: 动画的延迟时间  animation-iteration-count: 动画的重复次数，默认值为1，infinite无限次数 animation-timing-function: 动画的运动形式  注：  运动结束">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://weikuoguo.github.io/2020/07/25/【HTML-CSS】animation动画/avatar1.png">
 <meta property="og:image" content="https://weikuoguo.github.io/2020/07/25/【HTML-CSS】animation动画/avatar2.png">
 <meta property="og:image" content="https://weikuoguo.github.io/2020/07/25/【HTML-CSS】animation动画/avatar3.png">
 <meta property="og:image" content="https://weikuoguo.github.io/2020/07/25/【HTML-CSS】animation动画/avatar4.png">
-<meta property="og:updated_time" content="2020-07-25T08:02:06.695Z">
+<meta property="og:updated_time" content="2020-07-25T12:52:12.406Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【HTML&#x2F;CSS】animation动画">
-<meta name="twitter:description" content=".l{float: left;}     .r{float: right}     .clear::after{content:&quot;&quot;; clear: both; display: block;}      .demo1 .box1{width: 200px;height: 200px;border: 1px black solid; margin: 30px auto;}     .de">
+<meta name="twitter:description" content="animation 动画基本语法 animation-name: 设置动画的名字（自定义的） animation-duration： 动画的持续时间  animation-delay: 动画的延迟时间  animation-iteration-count: 动画的重复次数，默认值为1，infinite无限次数 animation-timing-function: 动画的运动形式  注：  运动结束">
 <meta name="twitter:image" content="https://weikuoguo.github.io/2020/07/25/【HTML-CSS】animation动画/avatar1.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -283,7 +283,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">1.2k</span>阅读时长: <span class="post-count reading-time">7 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">1.5k</span>阅读时长: <span class="post-count reading-time">8 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -412,67 +412,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <style>
-    .l{float: left;}
-    .r{float: right}
-    .clear::after{content:""; clear: both; display: block;}
-
-    .demo1 .box1{width: 200px;height: 200px;border: 1px black solid; margin: 30px auto;}
-    .demo1 .box2{width: 50px;height: 50px; background: brown; 
-    animation-name: mybox;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    /* 复合写法：animation: mybox 4s 2s infinite linear; */
-    }
-    @keyframes mybox{
-        from{transform:translate(0,0)}
-        25%{transform: translate(150px,0)}
-        50%{transform:translate(150px,150px)}
-        75%{transform:translate(0,150px)}
-        to{transform:translate(0,0);}}
-
-    .demo2{margin:0; padding:0}
-    .demo2 ul li{list-style: none;}
-    .demo2 ul{width: 400px; margin: 30px auto;}
-    .demo2 ul li{float: left;width: 100px; height: 100px;}
-    .demo2 ul li img{width: 60%; height: 60%; margin: 20px 20px;}
-    .demo2 ul li:hover img{animation: move 0.5s;}
-
-    @keyframes move{
-        0%{transform: translate(0,0);opacity: 1;}
-        60%{transform: translate(0,-50px);opacity: 0;}
-        61%{transform: translate(0,50px)}
-        100%{transform: translate(0,0);opacity: 1;}}
-
-    .demo3{margin:0; padding:0}
-    .demo3 .loading{width: 40px; height: 40px; margin: 30px auto; position: relative;}
-    .demo3 .loading .box1, .demo3 .loading .box2{width: 100%;height: 100%;position: absolute;}
-    .demo3 .loading .box2{transform: rotate(45deg);}
-
-    .demo3 .loading .box1 div, .demo3 .loading .box2 div{width: 10px;height: 10px; background: royalblue; border-radius:50% ; position: absolute; animation: loadingMove 1.6s infinite linear;}
-    .demo3 .loading .box1 div:nth-child(1),.demo3 .loading .box2 div:nth-child(1){ left: 0; top: 0;}
-    .demo3 .loading .box1 div:nth-child(2),.demo3 .loading .box2 div:nth-child(2){ right: 0; top: 0;}
-    .demo3 .loading .box1 div:nth-child(3),.demo3 .loading .box2 div:nth-child(3){ right: 0; bottom: 0;}
-    .demo3 .loading .box1 div:nth-child(4),.demo3 .loading .box2 div:nth-child(4){ left: 0; bottom: 0;}
-
-    @keyframes loadingMove{
-        0%{transform: scale(1)}
-        50%{transform:scale(0)}
-        100%{transform: scale(1)}}
-
-    .demo3 .loading .box1 div:nth-child(1){animation-delay: 0;}
-    .demo3 .loading .box2 div:nth-child(1){animation-delay: -.2s;}
-    .demo3 .loading .box1 div:nth-child(2){animation-delay: -.4s;}
-    .demo3 .loading .box2 div:nth-child(2){animation-delay: -.6s;}
-    .demo3 .loading .box1 div:nth-child(3){animation-delay: -.8s;}
-    .demo3 .loading .box2 div:nth-child(3){animation-delay: -1s;}
-    .demo3 .loading .box1 div:nth-child(4){animation-delay: -1.2s;}
-    .demo3 .loading .box2 div:nth-child(4){animation-delay: -1.4s;}
-    }
-</style>
-
-<h1 id="animation-动画基本语法"><a href="#animation-动画基本语法" class="headerlink" title="animation 动画基本语法"></a>animation 动画基本语法</h1><ul>
+        <h1 id="animation-动画基本语法"><a href="#animation-动画基本语法" class="headerlink" title="animation 动画基本语法"></a>animation 动画基本语法</h1><ul>
 <li>animation-name: 设置动画的名字（自定义的）</li>
 <li>animation-duration： 动画的持续时间 </li>
 <li>animation-delay: 动画的延迟时间 </li>
@@ -512,16 +452,16 @@ height:50vh;
     </ul>
 </div>
 
-<h2 id="Demo3-Loading-加载效果"><a href="#Demo3-Loading-加载效果" class="headerlink" title="Demo3: Loading 加载效果"></a>Demo3: Loading 加载效果</h2><h3 id="代码：-2"><a href="#代码：-2" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    .demo3 .loading&#123;width: 40px; height: 40px; margin: 30px auto; position: relative;&#125;</span><br><span class="line">    .demo3 .loading .box1, .demo3 .loading .box2&#123;width: 100%;height: 100%;position: absolute;&#125;</span><br><span class="line">    .demo3 .loading .box2&#123;transform: rotate(45deg);&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    .demo3 .loading .box1 div, .demo3 .loading .box2 div&#123;width: 10px;height: 10px; background: royalblue; border-radius:50% ; position: absolute; animation: loadingMove 1.6s infinite linear;&#125;</span><br><span class="line">    .demo3 .loading .box1 div:nth-child(1),.demo3 .loading .box2 div:nth-child(1)&#123; left: 0; top: 0;&#125;</span><br><span class="line">    .demo3 .loading .box1 div:nth-child(2),.demo3 .loading .box2 div:nth-child(2)&#123; right: 0; top: 0;&#125;</span><br><span class="line">    .demo3 .loading .box1 div:nth-child(3),.demo3 .loading .box2 div:nth-child(3)&#123; right: 0; bottom: 0;&#125;</span><br><span class="line">    .demo3 .loading .box1 div:nth-child(4),.demo3 .loading .box2 div:nth-child(4)&#123; left: 0; bottom: 0;&#125;</span><br><span class="line"></span><br><span class="line">    @keyframes loadingMove&#123;</span><br><span class="line">        0%&#123;transform: scale(1)&#125;</span><br><span class="line">        50%&#123;transform:scale(0)&#125;</span><br><span class="line">        100%&#123;transform: scale(1);&#125;&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .demo3 .loading .box1 div:nth-child(1)&#123;animation-delay: 0;&#125;</span><br><span class="line">    .demo3 .loading .box2 div:nth-child(1)&#123;animation-delay: -.2s;&#125;</span><br><span class="line">    .demo3 .loading .box1 div:nth-child(2)&#123;animation-delay: -.4s;&#125;</span><br><span class="line">    .demo3 .loading .box2 div:nth-child(2)&#123;animation-delay: -.6s;&#125;</span><br><span class="line">    .demo3 .loading .box1 div:nth-child(3)&#123;animation-delay: -.8s;&#125;</span><br><span class="line">    .demo3 .loading .box2 div:nth-child(3)&#123;animation-delay: -1s;&#125;</span><br><span class="line">    .demo3 .loading .box1 div:nth-child(4)&#123;animation-delay: -1.2s;&#125;</span><br><span class="line">    .demo3 .loading .box2 div:nth-child(4)&#123;animation-delay: -1.4s;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;demo3&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;loading&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;box1&quot;&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;        </span><br><span class="line">        &lt;div class=&quot;box2&quot;&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;    </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Demo3-load-加载效果"><a href="#Demo3-load-加载效果" class="headerlink" title="Demo3: load 加载效果"></a>Demo3: load 加载效果</h2><h3 id="代码：-2"><a href="#代码：-2" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    .demo3 .load&#123;width: 40px; height: 40px; margin: 30px auto; position: relative;&#125;</span><br><span class="line">    .demo3 .load .box1, .demo3 .load .box2&#123;width: 100%;height: 100%;position: absolute;&#125;</span><br><span class="line">    .demo3 .load .box2&#123;transform: rotate(45deg);&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    .demo3 .load .box1 div, .demo3 .load .box2 div&#123;width: 10px;height: 10px; background: royalblue; border-radius:50% ; position: absolute; animation: loadMove 1.6s infinite linear;&#125;</span><br><span class="line">    .demo3 .load .box1 div:nth-child(1),.demo3 .load .box2 div:nth-child(1)&#123; left: 0; top: 0;&#125;</span><br><span class="line">    .demo3 .load .box1 div:nth-child(2),.demo3 .load .box2 div:nth-child(2)&#123; right: 0; top: 0;&#125;</span><br><span class="line">    .demo3 .load .box1 div:nth-child(3),.demo3 .load .box2 div:nth-child(3)&#123; right: 0; bottom: 0;&#125;</span><br><span class="line">    .demo3 .load .box1 div:nth-child(4),.demo3 .load .box2 div:nth-child(4)&#123; left: 0; bottom: 0;&#125;</span><br><span class="line"></span><br><span class="line">    @keyframes loadMove&#123;</span><br><span class="line">        0%&#123;transform: scale(1)&#125;</span><br><span class="line">        50%&#123;transform:scale(0)&#125;</span><br><span class="line">        100%&#123;transform: scale(1);&#125;&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .demo3 .load .box1 div:nth-child(1)&#123;animation-delay: 0;&#125;</span><br><span class="line">    .demo3 .load .box2 div:nth-child(1)&#123;animation-delay: -.2s;&#125;</span><br><span class="line">    .demo3 .load .box1 div:nth-child(2)&#123;animation-delay: -.4s;&#125;</span><br><span class="line">    .demo3 .load .box2 div:nth-child(2)&#123;animation-delay: -.6s;&#125;</span><br><span class="line">    .demo3 .load .box1 div:nth-child(3)&#123;animation-delay: -.8s;&#125;</span><br><span class="line">    .demo3 .load .box2 div:nth-child(3)&#123;animation-delay: -1s;&#125;</span><br><span class="line">    .demo3 .load .box1 div:nth-child(4)&#123;animation-delay: -1.2s;&#125;</span><br><span class="line">    .demo3 .load .box2 div:nth-child(4)&#123;animation-delay: -1.4s;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;demo3&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;load&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;box1&quot;&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;        </span><br><span class="line">        &lt;div class=&quot;box2&quot;&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;    </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="效果：-2"><a href="#效果：-2" class="headerlink" title="效果："></a>效果：</h3><div class="demo3">
-    <div class="loading">
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果:"></a>效果:</h3><div class="demo3">
+    <div class="load">
         <div class="box1">
             <div></div>
             <div></div>
             <div></div>
             <div></div>
-        </div>
+        </div>        
         <div class="box2">
             <div></div>
             <div></div>
@@ -530,6 +470,100 @@ height:50vh;
         </div>    
     </div>
 </div>
+
+<p><strong>注意</strong>：class类别名不要出现“loading”, 否则在博客页面内显示不出来。</p>
+<h1 id="animation拓展语法："><a href="#animation拓展语法：" class="headerlink" title="animation拓展语法："></a>animation拓展语法：</h1><p>animation-fill-mode: 规定动画播放之前或之后，其动画效果是否可见。</p>
+<ul>
+<li>none(默认值)：在运动结束后回到初始位置，在延迟的情况下，让0%在延迟后生效。</li>
+<li>backwards：在延迟情况下，让0%在延迟前生效。</li>
+<li>forwards: 在运动结束后，停到结束位置。</li>
+<li>both: backwards和forwards同时生效。</li>
+</ul>
+<p>animation-direction: 定义是否应该轮流反向播放动画</p>
+<ul>
+<li>alternate: 一次正向(0%-100%)，一次反向(100%-0%)。</li>
+<li>reverse: 永远都是反向，从100%-0%。</li>
+<li>normal(默认值): 永远都是正向，从0%-100%。</li>
+</ul>
+<h1 id="animate-css动画库"><a href="#animate-css动画库" class="headerlink" title="animate.css动画库"></a>animate.css动画库</h1><ul>
+<li>一款强大的预设css3动画库</li>
+</ul>
+<p>官网地址：<a href="https://daneden.github.io/animate.css/" target="_blank" rel="noopener">https://daneden.github.io/animate.css/</a></p>
+<ul>
+<li>基本使用：</li>
+</ul>
+<p>animated: 基类(基础的样式，每个动画效果都需要添加)<br>infinite: 动画的无限次数</p>
+<ol>
+<li>引入animate.css文件：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;./animate.css&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>为所要加入动画的元素设置类，先引入animated 再引入特定的动画名称：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;./avatar1.png&quot; alt=&quot;&quot; class=&quot;animate__animated animate__bounce&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>: 在3.0版本之前可以单独使用animated和动画名称，4.0版本开始需要在animated与动画名称之前加”animate__”前缀，动画效果方可生效。</p>
+<style>
+    .l{float: left;}
+    .r{float: right}
+    .clear::after{content:""; clear: both; display: block;}
+
+    .demo1 .box1{width: 200px;height: 200px;border: 1px black solid; margin: 30px auto;}
+    .demo1 .box2{width: 50px;height: 50px; background: brown; 
+    animation-name: mybox;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* 复合写法：animation: mybox 4s 2s infinite linear; */
+    }
+    @keyframes mybox{
+        from{transform:translate(0,0)}
+        25%{transform: translate(150px,0)}
+        50%{transform:translate(150px,150px)}
+        75%{transform:translate(0,150px)}
+        to{transform:translate(0,0);}}
+
+    .demo2{margin:0; padding:0}
+    .demo2 ul li{list-style: none;}
+    .demo2 ul{width: 400px; margin: 30px auto;}
+    .demo2 ul li{float: left;width: 100px; height: 100px;}
+    .demo2 ul li img{width: 60%; height: 60%; margin: 20px 20px;}
+    .demo2 ul li:hover img{animation: move 0.5s;}
+
+    @keyframes move{
+        0%{transform: translate(0,0);opacity: 1;}
+        60%{transform: translate(0,-50px);opacity: 0;}
+        61%{transform: translate(0,50px)}
+        100%{transform: translate(0,0);opacity: 1;}}
+
+    .demo3 .load {width: 40px; height: 40px; margin: 30px auto; position: relative;}
+    .demo3 .load .box1, .demo3 .load .box2{width: 100%;height: 100%; position: absolute;}
+    .demo3 .load .box2{transform: rotate(45deg);}
+
+
+    .demo3 .load .box1 div, .demo3 .load .box2 div{width: 10px;height: 10px; background: royalblue; border-radius:50% ; position: absolute; animation: loadMove 1.6s infinite linear;}
+    .demo3 .load .box1 div:nth-child(1),.demo3 .load .box2 div:nth-child(1){ left: 0; top: 0;}
+    .demo3 .load .box1 div:nth-child(2),.demo3 .load .box2 div:nth-child(2){ right: 0; top: 0;}
+    .demo3 .load .box1 div:nth-child(3),.demo3 .load .box2 div:nth-child(3){ right: 0; bottom: 0;}
+    .demo3 .load .box1 div:nth-child(4),.demo3 .load .box2 div:nth-child(4){ left: 0; bottom: 0;}
+
+    @keyframes loadMove{
+        0%{transform: scale(1)}
+        50%{transform:scale(0)}
+        100%{transform: scale(1);}}
+    }
+
+    .demo3 .load .box1 div:nth-child(1){animation-delay: 0;}
+    .demo3 .load .box2 div:nth-child(1){animation-delay: -.2s;}
+    .demo3 .load .box1 div:nth-child(2){animation-delay: -.4s;}
+    .demo3 .load .box2 div:nth-child(2){animation-delay: -.6s;}
+    .demo3 .load .box1 div:nth-child(3){animation-delay: -.8s;}
+    .demo3 .load .box2 div:nth-child(3){animation-delay: -1s;}
+    .demo3 .load .box1 div:nth-child(4){animation-delay: -1.2s;}
+    .demo3 .load .box2 div:nth-child(4){animation-delay: -1.4s;}
+
+</style>
     </article>
     <!-- license  -->
     
@@ -537,13 +571,18 @@ height:50vh;
             <p>原文作者：<a href="https://weikuoguo.github.io">W.K.</a>
             <p>原文链接：<a href="https://weikuoguo.github.io/2020/07/25/【HTML-CSS】animation动画/">https://weikuoguo.github.io/2020/07/25/【HTML-CSS】animation动画/</a>
             <p>发表日期：<a href="https://weikuoguo.github.io/2020/07/25/【HTML-CSS】animation动画/">July 25th 2020, 3:07:57 pm</a>
-            <p>更新日期：<a href="https://weikuoguo.github.io/2020/07/25/【HTML-CSS】animation动画/">July 25th 2020, 4:02:06 pm</a>
+            <p>更新日期：<a href="https://weikuoguo.github.io/2020/07/25/【HTML-CSS】animation动画/">July 25th 2020, 8:52:12 pm</a>
             <p>版权声明：Copyright © 2019-2020 W.K. All rights reserved.</p>
         </div>
     
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2020/07/25/animate/" title= "">
+                    <div class="nextTitle">[Untitled Post]</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -668,7 +707,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#animation-动画基本语法"><span class="toc-number">1.</span> <span class="toc-text">animation 动画基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo1-基础语法展示"><span class="toc-number">1.1.</span> <span class="toc-text">Demo1: 基础语法展示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码："><span class="toc-number">1.1.1.</span> <span class="toc-text">代码：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果："><span class="toc-number">1.1.2.</span> <span class="toc-text">效果：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo2-划入划出小图标"><span class="toc-number">1.2.</span> <span class="toc-text">Demo2: 划入划出小图标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码：-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">代码：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果：-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">效果：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo3-Loading-加载效果"><span class="toc-number">1.3.</span> <span class="toc-text">Demo3: Loading 加载效果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码：-2"><span class="toc-number">1.3.1.</span> <span class="toc-text">代码：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果：-2"><span class="toc-number">1.3.2.</span> <span class="toc-text">效果：</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#animation-动画基本语法"><span class="toc-number">1.</span> <span class="toc-text">animation 动画基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo1-基础语法展示"><span class="toc-number">1.1.</span> <span class="toc-text">Demo1: 基础语法展示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码："><span class="toc-number">1.1.1.</span> <span class="toc-text">代码：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果："><span class="toc-number">1.1.2.</span> <span class="toc-text">效果：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo2-划入划出小图标"><span class="toc-number">1.2.</span> <span class="toc-text">Demo2: 划入划出小图标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码：-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">代码：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果：-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">效果：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo3-load-加载效果"><span class="toc-number">1.3.</span> <span class="toc-text">Demo3: load 加载效果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码：-2"><span class="toc-number">1.3.1.</span> <span class="toc-text">代码：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果"><span class="toc-number">1.3.2.</span> <span class="toc-text">效果:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#animation拓展语法："><span class="toc-number">2.</span> <span class="toc-text">animation拓展语法：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#animate-css动画库"><span class="toc-number">3.</span> <span class="toc-text">animate.css动画库</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -728,9 +767,20 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 5
+        Total : 6
         </div>
         <!-- search  -->
         
@@ -743,6 +793,11 @@ top:50vh;
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/25</span><a class="archive-post-title" href= "/2020/07/25/animate/" >[Untitled Post]</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -783,9 +838,9 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="HTML/CSS学习笔记"><span class="iconfont-archer">&#xe606;</span>HTML/CSS学习笔记</span>
-    
         <span class="sidebar-tag-name" data-tags="植物"><span class="iconfont-archer">&#xe606;</span>植物</span>
+    
+        <span class="sidebar-tag-name" data-tags="HTML/CSS学习笔记"><span class="iconfont-archer">&#xe606;</span>HTML/CSS学习笔记</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -820,9 +875,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="编程小白成长史"><span class="iconfont-archer">&#xe60a;</span>编程小白成长史</span>
-    
         <span class="sidebar-category-name" data-categories="仙折小筑"><span class="iconfont-archer">&#xe60a;</span>仙折小筑</span>
+    
+        <span class="sidebar-category-name" data-categories="编程小白成长史"><span class="iconfont-archer">&#xe60a;</span>编程小白成长史</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
