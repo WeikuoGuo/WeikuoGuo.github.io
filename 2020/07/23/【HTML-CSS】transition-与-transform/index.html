@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://weikuoguo.github.io/2020/07/23/【HTML-CSS】transition-与-transform/falali.JPG">
 <meta property="og:image" content="https://weikuoguo.github.io/2020/07/23/【HTML-CSS】transition-与-transform/falali.JPG">
 <meta property="og:image" content="https://weikuoguo.github.io/2020/07/23/【HTML-CSS】transition-与-transform/falali.JPG">
-<meta property="og:updated_time" content="2020-07-24T07:21:41.974Z">
+<meta property="og:updated_time" content="2020-07-26T14:01:21.660Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【HTML&#x2F;CSS】transition 与 transform">
 <meta name="twitter:description" content="transition 过渡 transition-property: 规定设置过渡效果的CSS属性的名称   使用：transition-property: width/height/color/all 指定宽/高/颜色/所有属性过渡  transition-duration: 规定完成过渡效果要多少秒或毫秒  transition-delay: 定义过渡效果何时开始。（既可以延迟（数值为正数）也">
@@ -293,7 +293,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">1.1k</span>阅读时长: <span class="post-count reading-time">5 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">2k</span>阅读时长: <span class="post-count reading-time">10 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -484,26 +484,46 @@ height:50vh;
 
 <p>效果：</p>
 <style>
-    .demo_list{width: 900px; margin：auto; list-style:none;}
-    .demo_list li{ float: left; width: 300px; height: 200px;}
+    .demo ul li{list-style: none}
+    .demo_list{width: 900px; margin：auto; list-style: none;}
+    .demo_list li{float: left; width: 300px; height: 200px;}
     .demo_list .list_photo{width: 252px; height: 171px; position: relative;left: 24px; top: 15px; overflow: hidden;}
     .demo_list .list_photo img{width: 100%; height:100%; margin-top:0px;}
     .demo_list .list_photo .list_photo_box1{width: 250px; height: 300px; background-color: aquamarine; opacity: 0.5; position: absolute;left: 50px; top: -35px; transform: translate(0,300px) rotate(60deg);transition: .5s;}
     .demo_list .list_photo .list_photo_box2{width: 250px; height: 300px; background-color: aquamarine; opacity: 0.5; position: absolute; left: -55px; top: -84px; transform: translate(0,-300px) rotate(60deg);transition: .5s;}
 
-
-
     .demo_list .list_photo .list_photo_text{width: 100%; position: absolute; bottom: 40px; text-align: center; background-color: black; opacity: 0.4; transform: scale(0) rotate(45deg); transition: .5s }
     .demo_list .list_photo .list_photo_text .list_photo_text_title{width：100%; font-size: 20px; line-height: 30px; color: white; border-bottom: 1px solid greenyellow ;}
     .demo_list .list_photo .list_photo_text .list_photo_text_body{width: 100%; font-size: 14px; line-height: 24px; color: white}
-
     .demo_list li:hover .list_photo_box1{transform: translate(0,0) rotate(30deg)}
-
     .demo_list li:hover .list_photo_box2{transform: translate(0,0) rotate(30deg)}
-
     .demo_list li:hover .list_photo_text{transform: scale(1) rotate(0)}
-
     .demo::after{content:""; clear: both; display: block;} 
+
+    .cube{width: 300px;height: 300px;border: 1px black solid; margin: 30px auto; padding: 0; perspective: 200px;}
+    .cube ul{list-style: none; width: 100px;height: 100px; margin: 100px; padding: 0; position: relative; transform-style: preserve-3d; transition: 2s; transform-origin: center center -50px;}
+    .cube ul li{list-style: none; width: 100px; height: 100px; position: absolute; line-height: 100px; text-align: center;color: cornsilk; font-size: 26px;}
+
+    .cube ul li:nth-child(1){background: crimson; left: 0; top: 0; }
+    .cube ul li:nth-child(2){background: green; left: 100px; top: 0; transform-origin:left; transform: rotateY(90deg);}
+    .cube ul li:nth-child(3){background: darkblue; left: -100px; top: 0;transform-origin:right; transform: rotateY(-90deg);}
+    .cube ul li:nth-child(4){background: palevioletred; left: 0; top: -100px;transform-origin:bottom; transform: rotateX(90deg);}
+    .cube ul li:nth-child(5){background: yellowgreen; left: 0; top: 100px;transform-origin:top; transform: rotateX(-90deg);}
+    .cube ul li:nth-child(6){background: orange; left: 0; top: 0; transform: translateZ(-100px) rotateY(180deg) ;} 
+
+    .cube ul{animation: 6s Cubemove linear infinite;}
+
+    @keyframes Cubemove{
+        0%{transform: rotateX(0) rotateY(0) rotateZ(0);}
+        12.5%{transform: rotateX(0) rotateY(-90deg) rotateZ(0);}
+        25%{transform: rotateX(0) rotateY(-90deg) rotateZ(-90deg);}
+        37.5%{transform: rotateX(90deg) rotateY(-90deg) rotateZ(-90deg)}
+        50%{transform: rotateX(180deg) rotateY(-90deg) rotateZ(-90deg)}
+        62.5%{transform: rotateX(180deg) rotateY(0) rotateZ(-90deg)}
+        75%{transform: rotateX(90deg) rotateY(0) rotateZ(-90deg);}
+        87.5%{transform: rotateX(90deg) rotateY(0) rotateZ(0);}
+        100%{transform: rotateX(00deg)d rotateY(0deg) rotateZ(0deg);}
+    }
 </style>
 
 <div class="demo">
@@ -575,7 +595,57 @@ height:50vh;
             </div>
         </li>
     </ul>    
-<div></div></div>
+<div>
+
+<h1 id="transform3D相关属性"><a href="#transform3D相关属性" class="headerlink" title="transform3D相关属性"></a>transform3D相关属性</h1><ul>
+<li><p><strong>rotateX()</strong>: 正值向上翻转</p>
+</li>
+<li><p><strong>rotateY()</strong>: 正值向右翻转</p>
+</li>
+<li><p><strong>translateZ()</strong>: 正值向前，负值向后</p>
+</li>
+<li><p><strong>scaleZ()</strong>: 立体元素的厚度</p>
+</li>
+</ul>
+<h3 id="3D写法："><a href="#3D写法：" class="headerlink" title="3D写法："></a>3D写法：</h3><ul>
+<li><p><strong>scale3d()</strong>: 3个值 x y z 分别代表宽、高、厚度</p>
+</li>
+<li><p><strong>translate3d()</strong>: 3个值 x y z</p>
+</li>
+<li><p><strong>rotate3d()</strong>: 四个值 0/1(x轴是否添加旋转角度) 0/1(y轴是否添加旋转角度) 0/1(z轴是否添加旋转角度) deg</p>
+</li>
+</ul>
+<h3 id="特殊属性"><a href="#特殊属性" class="headerlink" title="特殊属性"></a>特殊属性</h3><ul>
+<li><p><strong>perspective</strong>: 离屏幕多远的距离去观察元素，值越大幅度越小。加在外部容器上。值越大，立体感越弱，值越小，立体感越强。</p>
+</li>
+<li><p><strong>prespective-origin</strong>: 景深-基点的位置，观察元素的角度。</p>
+</li>
+<li><p><strong>transform-origin</strong>: x y z Z轴只能写数值，不能写单词（transform-origin: center center -50px;）</p>
+</li>
+<li><p><strong>transform-style</strong>: 3D空间</p>
+<ul>
+<li>flat(默认值2D), prespective-3D(3D,产生一个三维空间)</li>
+</ul>
+</li>
+<li><p><strong>backface-visibility</strong>: 背面隐藏</p>
+<ul>
+<li>hidden, visible(默认值)</li>
+</ul>
+</li>
+</ul>
+<h2 id="3D立方体的实现"><a href="#3D立方体的实现" class="headerlink" title="3D立方体的实现"></a>3D立方体的实现</h2><h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    .cube&#123;width: 300px;height: 300px;border: 1px black solid; margin: 30px auto; padding: 0; perspective: 200px;&#125;</span><br><span class="line">    .cube ul&#123;list-style: none; width: 100px;height: 100px; margin: 100px; padding: 0; position: relative; transform-style: preserve-3d; transition: 2s; transform-origin: center center -50px;&#125;</span><br><span class="line">    .cube ul li&#123;list-style: none; width: 100px; height: 100px; position: absolute; line-height: 100px; text-align: center;color: cornsilk; font-size: 26px;&#125;</span><br><span class="line"></span><br><span class="line">    .cube ul li:nth-child(1)&#123;background: crimson; left: 0; top: 0; &#125;</span><br><span class="line">    .cube ul li:nth-child(2)&#123;background: green; left: 100px; top: 0; transform-origin:left; transform: rotateY(90deg);&#125;</span><br><span class="line">    .cube ul li:nth-child(3)&#123;background: darkblue; left: -100px; top: 0;transform-origin:right; transform: rotateY(-90deg);&#125;</span><br><span class="line">    .cube ul li:nth-child(4)&#123;background: palevioletred; left: 0; top: -100px;transform-origin:bottom; transform: rotateX(90deg);&#125;</span><br><span class="line">    .cube ul li:nth-child(5)&#123;background: yellowgreen; left: 0; top: 100px;transform-origin:top; transform: rotateX(-90deg);&#125;</span><br><span class="line">    .cube ul li:nth-child(6)&#123;background: orange; left: 0; top: 0; transform: translateZ(-100px) rotateY(180deg) ;&#125; </span><br><span class="line"></span><br><span class="line">    .cube ul&#123;animation: 6s Cubemove linear infinite;&#125;</span><br><span class="line"></span><br><span class="line">    @keyframes Cubemove&#123;</span><br><span class="line">        0%&#123;transform: rotateX(0) rotateY(0) rotateZ(0);&#125;</span><br><span class="line">        12.5%&#123;transform: rotateX(0) rotateY(-90deg) rotateZ(0);&#125;</span><br><span class="line">        25%&#123;transform: rotateX(0) rotateY(-90deg) rotateZ(-90deg);&#125;</span><br><span class="line">        37.5%&#123;transform: rotateX(90deg) rotateY(-90deg) rotateZ(-90deg)&#125;</span><br><span class="line">        50%&#123;transform: rotateX(180deg) rotateY(-90deg) rotateZ(-90deg)&#125;</span><br><span class="line">        62.5%&#123;transform: rotateX(180deg) rotateY(0) rotateZ(-90deg)&#125;</span><br><span class="line">        75%&#123;transform: rotateX(90deg) rotateY(0) rotateZ(-90deg);&#125;</span><br><span class="line">        87.5%&#123;transform: rotateX(90deg) rotateY(0) rotateZ(0);&#125;</span><br><span class="line">        100%&#123;transform: rotateX(00deg)d rotateY(0deg) rotateZ(0deg);&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;div class=&quot;cube&quot;&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;1&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;2&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;4&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;5&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;3&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;6&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h3><div class="cube">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>4</li>
+        <li>5</li>
+        <li>3</li>
+        <li>6</li>
+    </ul>
+</div> 
+</div></div>
     </article>
     <!-- license  -->
     
@@ -583,7 +653,7 @@ height:50vh;
             <p>原文作者：<a href="https://weikuoguo.github.io">W.K.</a>
             <p>原文链接：<a href="https://weikuoguo.github.io/2020/07/23/【HTML-CSS】transition-与-transform/">https://weikuoguo.github.io/2020/07/23/【HTML-CSS】transition-与-transform/</a>
             <p>发表日期：<a href="https://weikuoguo.github.io/2020/07/23/【HTML-CSS】transition-与-transform/">July 23rd 2020, 10:38:46 am</a>
-            <p>更新日期：<a href="https://weikuoguo.github.io/2020/07/23/【HTML-CSS】transition-与-transform/">July 24th 2020, 3:21:41 pm</a>
+            <p>更新日期：<a href="https://weikuoguo.github.io/2020/07/23/【HTML-CSS】transition-与-transform/">July 26th 2020, 10:01:21 pm</a>
             <p>版权声明：Copyright © 2019-2020 W.K. All rights reserved.</p>
         </div>
     
@@ -719,7 +789,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#transition-过渡"><span class="toc-number">1.</span> <span class="toc-text">transition 过渡</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#transform变形"><span class="toc-number">2.</span> <span class="toc-text">transform变形</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#transition-与-transform小练习："><span class="toc-number">3.</span> <span class="toc-text">transition 与 transform小练习：</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#transition-过渡"><span class="toc-number">1.</span> <span class="toc-text">transition 过渡</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#transform变形"><span class="toc-number">2.</span> <span class="toc-text">transform变形</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#transition-与-transform小练习："><span class="toc-number">3.</span> <span class="toc-text">transition 与 transform小练习：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#transform3D相关属性"><span class="toc-number">4.</span> <span class="toc-text">transform3D相关属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3D写法："><span class="toc-number">4.0.1.</span> <span class="toc-text">3D写法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#特殊属性"><span class="toc-number">4.0.2.</span> <span class="toc-text">特殊属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3D立方体的实现"><span class="toc-number">4.1.</span> <span class="toc-text">3D立方体的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码："><span class="toc-number">4.1.1.</span> <span class="toc-text">代码：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果："><span class="toc-number">4.1.2.</span> <span class="toc-text">效果：</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
