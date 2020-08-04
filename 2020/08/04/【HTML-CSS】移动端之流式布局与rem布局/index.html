@@ -20,17 +20,21 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content>
-    <meta property="og:type" content="website">
-<meta property="og:title" content="虾仁饭的异想世界">
-<meta property="og:url" content="https://weikuoguo.github.io/categories/编程小白成长史/index.html">
+    <meta name="description" content="Viewport 视口在移动端，viewport视口就是浏览器现实页面内容的屏幕区域。在viewport视口中有两种视口，分别表示为：visual viewport(可视视口)和layout viewport(布局视口)。 visual viewport固定大小跟屏幕大小相同，在上面；而layout viewport可改变大小，在下面。layout viewport默认大小为980像素，可通过do">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【HTML&#x2F;CSS】移动端之流式布局与rem布局">
+<meta property="og:url" content="https://weikuoguo.github.io/2020/08/04/【HTML-CSS】移动端之流式布局与rem布局/index.html">
 <meta property="og:site_name" content="虾仁饭的异想世界">
+<meta property="og:description" content="Viewport 视口在移动端，viewport视口就是浏览器现实页面内容的屏幕区域。在viewport视口中有两种视口，分别表示为：visual viewport(可视视口)和layout viewport(布局视口)。 visual viewport固定大小跟屏幕大小相同，在上面；而layout viewport可改变大小，在下面。layout viewport默认大小为980像素，可通过do">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-08-04T02:18:12.755Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="虾仁饭的异想世界">
+<meta name="twitter:title" content="【HTML&#x2F;CSS】移动端之流式布局与rem布局">
+<meta name="twitter:description" content="Viewport 视口在移动端，viewport视口就是浏览器现实页面内容的屏幕区域。在viewport视口中有两种视口，分别表示为：visual viewport(可视视口)和layout viewport(布局视口)。 visual viewport固定大小跟屏幕大小相同，在上面；而layout viewport可改变大小，在下面。layout viewport默认大小为980像素，可通过do">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>虾仁饭の异想世界.</title>
+    <title>【HTML/CSS】移动端之流式布局与rem布局 · 虾仁饭の异想世界.</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -211,12 +215,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >虾仁饭の异想世界.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">【HTML/CSS】移动端之流式布局与rem布局</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>虾仁饭の异想世界.</a>
 </header>
@@ -228,24 +243,68 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            【HTML/CSS】移动端之流式布局与rem布局
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">635</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/08/04</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -346,288 +405,123 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/31/【HTML-CSS】Flex-与-Grid/" >
-            
-                <span>【HTML/CSS】Flex 与 Grid</span>
-        </a>
-        <div class="abstract-content">
-            Flex 弹性盒模型随着移动互联网的发展，对于网页布局来说要求越来越高，而传统的布局方案对于实现特殊布局非常不方便，比如垂直居中。
-2009年，W3C提出了一种新的解决方案——Flex布局，可以简便，完整，响应式的实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全的使用这项功能。
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="Viewport-视口"><a href="#Viewport-视口" class="headerlink" title="Viewport 视口"></a>Viewport 视口</h1><p>在移动端，viewport视口就是浏览器现实页面内容的屏幕区域。在viewport视口中有两种视口，分别表示为：visual viewport(可视视口)和layout viewport(布局视口)。</p>
+<p>visual viewport固定大小跟屏幕大小相同，在上面；而layout viewport可改变大小，在下面。layout viewport默认大小为980像素，可通过document.documentElement.clientWidth获取。</p>
+<p>现代网页制作需要讲layout viewport设置成跟visual viewport等同大小，方便进行网页制作。</p>
+<h2 id="viewport-设置"><a href="#viewport-设置" class="headerlink" title="viewport 设置"></a>viewport 设置</h2><p>通过<meta>标签进行设置，name属性指定viewport值，content属性进行视口配置。</p>
+<table>
+<thead>
+<tr>
+<th>取值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>width</td>
+<td>设置layout viewport的宽度特定值，device-width表示设备宽</td>
+</tr>
+<tr>
+<td>height</td>
+<td>设置layout viewport的高度特定值，一般不进行设置</td>
+</tr>
+<tr>
+<td>initial-scale</td>
+<td>设置页面初始缩放</td>
+</tr>
+<tr>
+<td>minimum-scale</td>
+<td>设置页面最小缩放</td>
+</tr>
+<tr>
+<td>maximum-scale</td>
+<td>设置页面最大缩放</td>
+</tr>
+<tr>
+<td>user-scalable</td>
+<td>设置页面能否进行缩放</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width initial-scale=1.0 user-scalable=no&quot; &gt;</span><br></pre></td></tr></table></figure>
 
+<h1 id="移动端适配方案"><a href="#移动端适配方案" class="headerlink" title="移动端适配方案"></a>移动端适配方案</h1><ol>
+<li><p>百分比布局，也叫流式布局。代表网站：优酷、百度、天猫、腾讯。</p>
+</li>
+<li><p>等比缩放布局，也叫rem布局。代表网站：网易、爱奇艺、淘宝、美团。</p>
+</li>
+</ol>
+<p>！<a href="流式等比.jpg">流式等比</a></p>
+<h2 id="流式布局原则"><a href="#流式布局原则" class="headerlink" title="流式布局原则"></a>流式布局原则</h2><p>！<a href="流式原则.jpg">流式原则</a></p>
+<p>好处：大屏幕下显示更多内容</p>
+<p>坏处：宽屏下，比例会有一些不协调</p>
+<h2 id="rem布局"><a href="#rem布局" class="headerlink" title="rem布局"></a>rem布局</h2><p>单位：</p>
+<ul>
+<li><p>em: 是一个相对单位，1em等于当前元素或父元素的font-size值。</p>
+</li>
+<li><p>rem: 是一个相对单位，1rem等于根元素的font-size值。</p>
+</li>
+<li><p>vw/vh: 把屏幕分成100份，1vw等于屏幕宽的1%。</p>
+</li>
+</ul>
+<p><strong>原理</strong>：根据不同的设备大小，设置不同的root-font-size，在写样式的时候，利用同一套以rem为单位的元素进行布局，实现自适应的相对大小布局。</p>
+<p><strong>动态设置font-size</strong>：</p>
+<h3 id="通过JS"><a href="#通过JS" class="headerlink" title="通过JS"></a>通过JS</h3><style>
+    table th:first-of-type {width: 4cm;}
+</style>
 
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">      &lt;script&gt;</span><br><span class="line">            // layout viewport : document.documentElement.clientWidth</span><br><span class="line">            // iphone6 : 375px</span><br><span class="line">            // iphone6 plus: 414px</span><br><span class="line"></span><br><span class="line">            // iphone6 : 375px</span><br><span class="line">            // iphone6 plus: 414px</span><br><span class="line"></span><br><span class="line">            // iphone6 : document.documentElement.clientWidth / 3.75 = 100</span><br><span class="line">            // iphone6 plus: document.documentElement.clientWidth /3.75 = 110.4</span><br><span class="line"></span><br><span class="line">            var fontSize = document.documentElement.clientWidth / 3.75;</span><br><span class="line">            document.documentElement.style.fontSize = fontSize + &apos;px&apos;</span><br><span class="line">      &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 
-作用在flex容器上
-作用在flex子项上
+<p>rem与px相互转化的工具：px to rem 在 VS code商店搜索并安装后，设置浏览器font-size，选中px为单位的数值，alt+z便可以自动转换。支持多个目标的同时转换。</p>
+<h3 id="通过vw"><a href="#通过vw" class="headerlink" title="通过vw"></a>通过vw</h3><p>通过设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html&#123;font-size:26.6666667vw;&#125;</span><br></pre></td></tr></table></figure>
 
+<p>实现不同设备的自适应。</p>
+<p>注： 要给body重置一下默认的font-size: 16px</p>
 
-
-flex-direction
-order
-
-
-flex-wrap
-flex-grow
-
-
-flex-flow
-flex-shrink
-
-
-justify-content
-flex-basis
-
-
-align-items
-flex...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "HTML/CSS学习笔记">HTML/CSS学习笔记</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/28/【HTML-CSS】CSS3-IE低版本兼容的若干问题/" >
-            
-                <span>【HTML/CSS】CSS3 IE低版本兼容的若干问题</span>
-        </a>
-        <div class="abstract-content">
-            CSS HackCSS Hack用来解决浏览器的兼容问题，为不同版本的浏览器定制编写不同的CSS效果，使用每个浏览器的单独识别的样式代码，控制浏览器的显示样式。
-CSS Hack分类：
-
-CSS属性前缀法: 在CSS样式属性名前加上一些只有特定浏览器才能识别的hack前缀，以达到预期的页面展现效果。
-
-
-
-
-前缀标识
-兼容浏览器
-
-
-
-_
-IE6
-
-
-+, *
-IE6, IE7
-
-
-\9
-IE6, IE7, IE8, IE9
-
-
-\0
-IE8, IE9, IE10, IE11
-
-
-例：.elem{ _width : 10px } .elem{ width : 10px\9}
-
-选择器前缀...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://weikuoguo.github.io">W.K.</a>
+            <p>原文链接：<a href="https://weikuoguo.github.io/2020/08/04/【HTML-CSS】移动端之流式布局与rem布局/">https://weikuoguo.github.io/2020/08/04/【HTML-CSS】移动端之流式布局与rem布局/</a>
+            <p>发表日期：<a href="https://weikuoguo.github.io/2020/08/04/【HTML-CSS】移动端之流式布局与rem布局/">August 4th 2020, 10:17:44 am</a>
+            <p>更新日期：<a href="https://weikuoguo.github.io/2020/08/04/【HTML-CSS】移动端之流式布局与rem布局/">August 4th 2020, 10:18:12 am</a>
+            <p>版权声明：Copyright © 2019-2020 W.K. All rights reserved.</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "HTML/CSS学习笔记">HTML/CSS学习笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/28/【HTML-CSS】CSS3阴影-遮罩-倒影-模糊与计算-分栏-计算-伪元素与伪类/" >
-            
-                <span>【HTML/CSS】CSS3阴影/遮罩/倒影/模糊与计算/分栏/计算/伪元素与伪类</span>
-        </a>
-        <div class="abstract-content">
-            文字阴影text-shadow: 文字阴影  x, y, blur, color
-注意：阴影默认颜色与文字颜色相同
-注意：通过“，”分隔可以实现多阴影
-Demo：火焰字代码：12345&lt;div class=&quot;demo1&quot;&gt; Hello world! &lt;div&gt;&lt;style&gt;    .demo1&#123;font-size: 60px;text-shadow: 0 0 4px white, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80,2px -25px 18px...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "HTML/CSS学习笔记">HTML/CSS学习笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/27/【HTML-CSS】CSS3背景样式拓展-渐变-icon-face/" >
-            
-                <span>【HTML/CSS】CSS3背景样式拓展/渐变/icon-face</span>
-        </a>
-        <div class="abstract-content">
-            CSS3中背景图样式拓展基本使用：
-background-size: 背景图的尺寸大小
-
-cover: 覆盖：等比放大或缩小，直至将全部容器填满，溢出部分隐藏。
-contain：包含：等比放大或缩小，直至背景图全部被包含在容器内无溢出。
-
-
-background-origin：背景图的填充位置
-
-padding-box(默认)：从padding部分开始填充
-border-box：从border部分开始填充
-content-box：从content部分开始填充
-
-
-background-clip: 背景图的裁切方式
-
-padding-box：保留padding内部的内容
-border-bo...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "HTML/CSS学习笔记">HTML/CSS学习笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/25/【HTML-CSS】animation动画/" >
-            
-                <span>【HTML/CSS】animation动画</span>
-        </a>
-        <div class="abstract-content">
-            animation 动画基本语法
-animation-name: 设置动画的名字（自定义的）
-animation-duration： 动画的持续时间 
-animation-delay: 动画的延迟时间 
-animation-iteration-count: 动画的重复次数，默认值为1，infinite无限次数
-animation-timing-function: 动画的运动形式
-
-注：
-
-运动结束后，默认情况下会停留在起始位置
-from等价于0%, to等价于100%
-
-Demo1: 基础语法展示代码：12345678910111213141516171819202122&lt;styl...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/25</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "HTML/CSS学习笔记">HTML/CSS学习笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/23/【HTML-CSS】transition-与-transform/" >
-            
-                <span>【HTML/CSS】transition 与 transform</span>
-        </a>
-        <div class="abstract-content">
-            transition 过渡
-transition-property: 规定设置过渡效果的CSS属性的名称
-  使用：transition-property: width/height/color/all 指定宽/高/颜色/所有属性过渡
-
-transition-duration: 规定完成过渡效果要多少秒或毫秒
-
-transition-delay: 定义过渡效果何时开始。（既可以延迟（数值为正数）也可以提前（数值为负数））
-
-transition-timing-function: 规定速度效果的速度曲线
-
-Linear 线性变化
-ease (默认值)
-ease-in 
-ease-out 
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/23</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "HTML/CSS学习笔记">HTML/CSS学习笔记</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/08/02/写给自己的一些话/" title= "写给自己的一些话">
+                    <div class="prevTitle">写给自己的一些话</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -707,6 +601,24 @@ ease-out
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Viewport-视口"><span class="toc-number">1.</span> <span class="toc-text">Viewport 视口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#viewport-设置"><span class="toc-number">1.1.</span> <span class="toc-text">viewport 设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#移动端适配方案"><span class="toc-number">2.</span> <span class="toc-text">移动端适配方案</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#流式布局原则"><span class="toc-number">2.1.</span> <span class="toc-text">流式布局原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rem布局"><span class="toc-number">2.2.</span> <span class="toc-text">rem布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通过JS"><span class="toc-number">2.2.1.</span> <span class="toc-text">通过JS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过vw"><span class="toc-number">2.2.2.</span> <span class="toc-text">通过vw</span></a></li></ol></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -995,6 +907,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
