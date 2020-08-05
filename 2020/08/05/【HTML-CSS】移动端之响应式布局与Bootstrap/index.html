@@ -20,17 +20,24 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content>
-    <meta property="og:type" content="website">
-<meta property="og:title" content="虾仁饭的异想世界">
-<meta property="og:url" content="https://weikuoguo.github.io/archives/2020/08/index.html">
+    <meta name="description" content="响应式布局利用媒体查询，既media queries, 可以针对不同的媒体类型定义不同的样式，从而实现响应式布局。 媒体类型：    取值 含义    all 用于所有设备   print 用于打印机和打印预览   screen 用于电脑屏幕，平板电脑，智能手机等   speech 应用于屏幕阅读器等发声设备   常见选项：媒体类型，and, not(取反), min-width, max-wid">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【HTML&#x2F;CSS】移动端之响应式布局与Bootstrap">
+<meta property="og:url" content="https://weikuoguo.github.io/2020/08/05/【HTML-CSS】移动端之响应式布局与Bootstrap/index.html">
 <meta property="og:site_name" content="虾仁饭的异想世界">
+<meta property="og:description" content="响应式布局利用媒体查询，既media queries, 可以针对不同的媒体类型定义不同的样式，从而实现响应式布局。 媒体类型：    取值 含义    all 用于所有设备   print 用于打印机和打印预览   screen 用于电脑屏幕，平板电脑，智能手机等   speech 应用于屏幕阅读器等发声设备   常见选项：媒体类型，and, not(取反), min-width, max-wid">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://weikuoguo.github.io/2020/08/05/【HTML-CSS】移动端之响应式布局与Bootstrap/bootstrao_1.png">
+<meta property="og:image" content="https://weikuoguo.github.io/2020/08/05/【HTML-CSS】移动端之响应式布局与Bootstrap/bootstrao_2.png">
+<meta property="og:updated_time" content="2020-08-05T06:36:26.682Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="虾仁饭的异想世界">
+<meta name="twitter:title" content="【HTML&#x2F;CSS】移动端之响应式布局与Bootstrap">
+<meta name="twitter:description" content="响应式布局利用媒体查询，既media queries, 可以针对不同的媒体类型定义不同的样式，从而实现响应式布局。 媒体类型：    取值 含义    all 用于所有设备   print 用于打印机和打印预览   screen 用于电脑屏幕，平板电脑，智能手机等   speech 应用于屏幕阅读器等发声设备   常见选项：媒体类型，and, not(取反), min-width, max-wid">
+<meta name="twitter:image" content="https://weikuoguo.github.io/2020/08/05/【HTML-CSS】移动端之响应式布局与Bootstrap/bootstrao_1.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>虾仁饭の异想世界.</title>
+    <title>【HTML/CSS】移动端之响应式布局与Bootstrap · 虾仁饭の异想世界.</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -211,12 +218,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >虾仁饭の异想世界.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">【HTML/CSS】移动端之响应式布局与Bootstrap</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>虾仁饭の异想世界.</a>
 </header>
@@ -228,24 +246,68 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            【HTML/CSS】移动端之响应式布局与Bootstrap
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">889</span>阅读时长: <span class="post-count reading-time">4 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/08/05</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -346,113 +408,144 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/05/【HTML-CSS】移动端之响应式布局与Bootstrap/" >
-            
-                <span>【HTML/CSS】移动端之响应式布局与Bootstrap</span>
-        </a>
-        <div class="abstract-content">
-            响应式布局利用媒体查询，既media queries, 可以针对不同的媒体类型定义不同的样式，从而实现响应式布局。
-媒体类型：
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h1><p>利用媒体查询，既media queries, 可以针对不同的媒体类型定义不同的样式，从而实现响应式布局。</p>
+<p>媒体类型：</p>
+<table>
+<thead>
+<tr>
+<th>取值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>all</td>
+<td>用于所有设备</td>
+</tr>
+<tr>
+<td>print</td>
+<td>用于打印机和打印预览</td>
+</tr>
+<tr>
+<td>screen</td>
+<td>用于电脑屏幕，平板电脑，智能手机等</td>
+</tr>
+<tr>
+<td>speech</td>
+<td>应用于屏幕阅读器等发声设备</td>
+</tr>
+</tbody></table>
+<p>常见选项：媒体类型，and, not(取反), min-width, max-width, orientation:portrait(纵屏幕), orientation:landscape(横屏幕), &lt;link&gt;</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@media all and (min-width:500px)&#123;#box&#123;background:blue&#125;&#125;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; herf=&quot;base.css&quot; media=&quot;all and (min-width:400px)&quot;&gt;</span><br></pre></td></tr></table></figure>
 
+<p>多个条件同时满足的时候，后写的属性有较高优先级。</p>
+<p>常见修改样式：</p>
+<p>display, float, width。</p>
+<p><strong>注意</strong>：响应式代码写到要适配的CSS后面</p>
+<h1 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h1><p>Bootstrap是目前最受欢迎的HTML，CSS和JS框架，用于开发响应式布局，移动设备优先的web项目。</p>
+<p>特色：</p>
+<ol>
+<li><p>响应式布局</p>
+</li>
+<li><p>基于flex的栅格系统</p>
+</li>
+<li><p>丰富的组件和工具方法</p>
+</li>
+<li><p>常见交互使用</p>
+</li>
+</ol>
+<p>官网：</p>
+<p><a href="https://getbootstrap.com/" target="_blank" rel="noopener">https://getbootstrap.com/</a></p>
+<h2 id="Containers"><a href="#Containers" class="headerlink" title="Containers"></a>Containers</h2><p><img src="//weikuoguo.github.io/2020/08/05/【HTML-CSS】移动端之响应式布局与Bootstrap/bootstrao_1.png" alt="containers"></p>
+<p>containers: 版心布局</p>
+<p>containers-fluid：通栏布局</p>
+<p>Responsive breakpoints: 不同尺寸的响应节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;container-sm&quot;&gt;100% wide until small breakpoint&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;container-md&quot;&gt;100% wide until medium breakpoint&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;container-lg&quot;&gt;100% wide until large breakpoint&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;container-xl&quot;&gt;100% wide until extra large breakpoint&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">// Extra small devices (portrait phones, less than 576px)</span><br><span class="line">// No media query for `xs` since this is the default in Bootstrap</span><br><span class="line"></span><br><span class="line">// Small devices (landscape phones, 576px and up)</span><br><span class="line">@media (min-width: 576px) &#123; ... &#125;</span><br><span class="line"></span><br><span class="line">// Medium devices (tablets, 768px and up)</span><br><span class="line">@media (min-width: 768px) &#123; ... &#125;</span><br><span class="line"></span><br><span class="line">// Large devices (desktops, 992px and up)</span><br><span class="line">@media (min-width: 992px) &#123; ... &#125;</span><br><span class="line"></span><br><span class="line">// Extra large devices (large desktops, 1200px and up)</span><br><span class="line">@media (min-width: 1200px) &#123; ... &#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="Grid-system"><a href="#Grid-system" class="headerlink" title="Grid system"></a>Grid system</h2><ul>
+<li>Grid options: 网格配置, 默认将全部容器分为12个栅格，在不指定占有多少的时候默认自适应。</li>
+</ul>
+<p><img src="//weikuoguo.github.io/2020/08/05/【HTML-CSS】移动端之响应式布局与Bootstrap/bootstrao_2.png" alt="gridoptions"></p>
+<ul>
+<li><p>Responsive classes：响应式类</p>
+</li>
+<li><p>Gutters：间距，通过设置no-gutters类去掉间距。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;row no-gutters&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
-取值
-含义
+<ul>
+<li><p>Alignment：对齐方式</p>
+</li>
+<li><p>Recordering：排序</p>
+</li>
+<li><p>Offsetting: 间距</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;container&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;col-sm&quot;&gt;</span><br><span class="line">      One of three columns</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col-sm&quot;&gt;</span><br><span class="line">      One of three columns</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col-sm&quot;&gt;</span><br><span class="line">      One of three columns</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
+<p>横向分辨率较大时横向排列，横向分辨率较小时纵向排列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;container&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;w-100&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
+<p>插入换行标识</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;container&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;col-md-6 col-lg-4 col-xl-3&quot;&gt;col&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col-md-6 col-lg-4 col-xl-3&quot;&gt;col&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col-md-6 col-lg-4 col-xl-3&quot;&gt;col&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col-md-6 col-lg-4 col-xl-3&quot;&gt;col&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
-all
-用于所有设备
+<p>设置不同的屏幕分辨率下每行包含的列数不同。</p>
+<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><p>Reboot, Typography, Code, Images, Tables, Figures</p>
+<p>参考文档：</p>
+<p><a href="https://getbootstrap.com/docs/4.5/content/" target="_blank" rel="noopener">https://getbootstrap.com/docs/4.5/content/</a></p>
+<h2 id="components"><a href="#components" class="headerlink" title="components"></a>components</h2><p>一些bootstrap中的常用组件，包括按钮，加载，徽章，幻灯展示等。</p>
+<p>参考文档：</p>
+<p><a href="https://getbootstrap.com/docs/4.5/components/" target="_blank" rel="noopener">https://getbootstrap.com/docs/4.5/components/</a></p>
+<h2 id="Utilities"><a href="#Utilities" class="headerlink" title="Utilities"></a>Utilities</h2><p>Borders, Clearfix, Close icon, Colors, Display, Embed</p>
+<p>边框，清浮动，颜色，显示类型等设置</p>
+<p>参考文档：<br><a href="https://getbootstrap.com/docs/4.5/utilities/" target="_blank" rel="noopener">https://getbootstrap.com/docs/4.5/utilities/</a></p>
 
-
-print
-用于打印机和打印预览
-
-
-screen
-用于电脑屏幕，平板电脑，智能手机等
-
-
-speech
-应用于屏幕阅读器等发声设备
-
-
-常见选项：媒体类型，and, not(取反), min-width, max-width, orientation:portrait(纵屏幕), orientation:landscape(横屏幕), &lt;link&gt;
-示例：
-12@media all and (min...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/05</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/04/【HTML-CSS】移动端之流式布局与rem布局/" >
-            
-                <span>【HTML/CSS】移动端之流式布局与rem布局</span>
-        </a>
-        <div class="abstract-content">
-            Viewport 视口在移动端，viewport视口就是浏览器现实页面内容的屏幕区域。在viewport视口中有两种视口，分别表示为：visual viewport(可视视口)和layout viewport(布局视口)。
-visual viewport固定大小跟屏幕大小相同，在上面；而layout viewport可改变大小，在下面。layout viewport默认大小为980像素，可通过document.documentElement.clientWidth获取。
-现代网页制作需要讲layout viewport设置成跟visual viewport等同大小，方便进行网页制作。
-v...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://weikuoguo.github.io">W.K.</a>
+            <p>原文链接：<a href="https://weikuoguo.github.io/2020/08/05/【HTML-CSS】移动端之响应式布局与Bootstrap/">https://weikuoguo.github.io/2020/08/05/【HTML-CSS】移动端之响应式布局与Bootstrap/</a>
+            <p>发表日期：<a href="https://weikuoguo.github.io/2020/08/05/【HTML-CSS】移动端之响应式布局与Bootstrap/">August 5th 2020, 2:36:06 pm</a>
+            <p>更新日期：<a href="https://weikuoguo.github.io/2020/08/05/【HTML-CSS】移动端之响应式布局与Bootstrap/">August 5th 2020, 2:36:26 pm</a>
+            <p>版权声明：Copyright © 2019-2020 W.K. All rights reserved.</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/04</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/08/02/写给自己的一些话/" >
-            
-                <span>写给自己的一些话</span>
-        </a>
-        <div class="abstract-content">
-            其实，博客开通之初，就想写这样一篇文章作为一个见证。不矫情，不墨迹，单纯写一写建站初衷。
-然而，这样的想法与写博客的计划一同搁置了将近一年，一部分原因是这一年于我而言发生了大大小小太多的事，我不想以一种很丧的状态开启我写博客的历程。另一方面则是几次想落笔的时候，又不知该从何说起。
-其实，早先建站的时候，有些许的原因是觉得这样很酷。看了一些别人给出的建站理由，虽然五花八门，但都利大于弊，让我很难不心动。然而这可能也正是我虽然建立了博客，却迟迟没有开始动笔的原因，别人的理由再好那也是别人的。有的时候，驱动人去做一件“可以但没必要”的事情的，往往是内因大于外因。
-其实这一年的时间里，我也反复的...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/02</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/08/04/【HTML-CSS】移动端之流式布局与rem布局/" title= "【HTML/CSS】移动端之流式布局与rem布局">
+                    <div class="prevTitle">【HTML/CSS】移动端之流式布局与rem布局</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -532,6 +625,24 @@ v...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#响应式布局"><span class="toc-number">1.</span> <span class="toc-text">响应式布局</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Bootstrap"><span class="toc-number">2.</span> <span class="toc-text">Bootstrap</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Containers"><span class="toc-number">2.1.</span> <span class="toc-text">Containers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Grid-system"><span class="toc-number">2.2.</span> <span class="toc-text">Grid system</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Content"><span class="toc-number">2.3.</span> <span class="toc-text">Content</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#components"><span class="toc-number">2.4.</span> <span class="toc-text">components</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Utilities"><span class="toc-number">2.5.</span> <span class="toc-text">Utilities</span></a></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -834,6 +945,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
