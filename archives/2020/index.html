@@ -359,7 +359,21 @@
                 <span>【MySQL】MySQL体系结构及基础管理</span>
         </a>
         <div class="abstract-content">
-            
+            MySQL 客户端/服务器工作模型（C/S）
+MySQL服务器端与客户端通过CSS命令连接，形成C/S模型MySQL服务器进行管理。
+连接方式有：
+
+本地scoket连接方式：只能在本地使用不依赖IP和端口
+
+12socket=/tmp/mysql.sockmysql -S /tmp/mysql.sock
+
+
+TCP/IP方式（远程、本地）：
+
+1mysql -uroot -poldboy123 -h 10.0.0.51 -P3306
+
+服务器端实例的概念实例：mysqld后台守护进程 + Master Thread + 干活的Thread + 预分配的内存
+类比：公司 = 老板 + 经...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -846,6 +860,10 @@ border-bo...
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
     
     
     

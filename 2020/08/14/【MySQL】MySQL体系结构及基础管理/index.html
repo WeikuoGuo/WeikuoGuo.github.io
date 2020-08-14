@@ -20,14 +20,23 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content>
-    <meta property="og:type" content="article">
+    <meta name="description" content="MySQL 客户端/服务器工作模型（C/S） MySQL服务器端与客户端通过CSS命令连接，形成C/S模型MySQL服务器进行管理。 连接方式有：  本地scoket连接方式：只能在本地使用不依赖IP和端口  12socket=/tmp/mysql.sockmysql -S /tmp/mysql.sock   TCP/IP方式（远程、本地）：  1mysql -uroot -poldboy123">
+<meta property="og:type" content="article">
 <meta property="og:title" content="【MySQL】MySQL体系结构及基础管理">
 <meta property="og:url" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/index.html">
 <meta property="og:site_name" content="虾仁饭的异想世界">
+<meta property="og:description" content="MySQL 客户端/服务器工作模型（C/S） MySQL服务器端与客户端通过CSS命令连接，形成C/S模型MySQL服务器进行管理。 连接方式有：  本地scoket连接方式：只能在本地使用不依赖IP和端口  12socket=/tmp/mysql.sockmysql -S /tmp/mysql.sock   TCP/IP方式（远程、本地）：  1mysql -uroot -poldboy123">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-08-14T01:20:28.537Z">
+<meta property="og:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/MySQLCS%E6%A8%A1%E5%9E%8B.png">
+<meta property="og:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/MySQL%E5%AE%9E%E4%BE%8B.png">
+<meta property="og:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/SQL%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B.png">
+<meta property="og:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/SQL%E9%80%BB%E8%BE%91.png">
+<meta property="og:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/SQL%E7%89%A9%E7%90%86.png">
+<meta property="og:updated_time" content="2020-08-14T01:24:38.031Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【MySQL】MySQL体系结构及基础管理">
+<meta name="twitter:description" content="MySQL 客户端/服务器工作模型（C/S） MySQL服务器端与客户端通过CSS命令连接，形成C/S模型MySQL服务器进行管理。 连接方式有：  本地scoket连接方式：只能在本地使用不依赖IP和端口  12socket=/tmp/mysql.sockmysql -S /tmp/mysql.sock   TCP/IP方式（远程、本地）：  1mysql -uroot -poldboy123">
+<meta name="twitter:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/MySQLCS%E6%A8%A1%E5%9E%8B.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
@@ -275,7 +284,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">0</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">715</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -404,7 +413,58 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        
+        <h1 id="MySQL-客户端-服务器工作模型（C-S）"><a href="#MySQL-客户端-服务器工作模型（C-S）" class="headerlink" title="MySQL 客户端/服务器工作模型（C/S）"></a>MySQL 客户端/服务器工作模型（C/S）</h1><p><img src="//weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/MySQLCS%E6%A8%A1%E5%9E%8B.png" alt="MySQLCS"></p>
+<p>MySQL服务器端与客户端通过CSS命令连接，形成C/S模型MySQL服务器进行管理。</p>
+<p>连接方式有：</p>
+<ol>
+<li>本地scoket连接方式：只能在本地使用不依赖IP和端口</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">socket=/tmp/mysql.sock</span><br><span class="line">mysql -S /tmp/mysql.sock</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>TCP/IP方式（远程、本地）：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -poldboy123 -h 10.0.0.51 -P3306</span><br></pre></td></tr></table></figure>
+
+<h1 id="服务器端实例的概念"><a href="#服务器端实例的概念" class="headerlink" title="服务器端实例的概念"></a>服务器端实例的概念</h1><p>实例：mysqld后台守护进程 + Master Thread + 干活的Thread + 预分配的内存</p>
+<p>类比：公司 = 老板 + 经理 + 员工 + 办公室</p>
+<p>功能：管理数据</p>
+<p><img src="//weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/MySQL%E5%AE%9E%E4%BE%8B.png" alt="MySQL实例"></p>
+<h1 id="mysqld的程序结构"><a href="#mysqld的程序结构" class="headerlink" title="mysqld的程序结构"></a>mysqld的程序结构</h1><p>一条SQL语句的执行过程</p>
+<ol>
+<li>连接层</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">（1）提供连接协议：TCP/IP 、SOCKET</span><br><span class="line">（2）提供验证：用户、密码，IP，SOCKET</span><br><span class="line">（3）提供专用连接线程：接收用户SQL，返回结果通过以下语句可以查看到连接线程基本情况</span><br><span class="line">mysql&gt; show processlist;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>SQL层 （重点）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">（1）接收上层传送的SQL语句</span><br><span class="line">（2）语法验证模块：验证语句语法,是否满足SQL_MODE</span><br><span class="line">（3）语义检查：判断SQL语句的类型</span><br><span class="line">        DDL ：数据定义语言</span><br><span class="line">        DCL ：数据控制语言</span><br><span class="line">        DML ：数据操作语言</span><br><span class="line">        DQL： 数据查询语言</span><br><span class="line">        ...</span><br><span class="line">（4）权限检查：用户对库表有没有权限</span><br><span class="line">（5）解析器：对语句执行前,进行预处理，生成解析树(执行计划),说白了就是生成多种执行方案.</span><br><span class="line">（6）优化器：根据解析器得出的多种执行计划，进行判断，选择最优的执行计划</span><br><span class="line">        代价模型：资源（CPU IO MEM）的耗损评估性能好坏</span><br><span class="line">（7）执行器：根据最优执行计划，执行SQL语句，产生执行结果</span><br><span class="line">        执行结果：在磁盘的xxxx位置上</span><br><span class="line">（8）提供查询缓存（默认是没开启的），会使用redis tair替代查询缓存功能</span><br><span class="line">（9）提供日志记录（日志管理章节）：binlog，默认是没开启的。</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>存储引擎层（类似于Linux中的文件系统）</li>
+</ol>
+<p>负责根据SQL层执行的结果，从磁盘上拿数据。将16进制的磁盘数据，交由SQL结构化化成表，连接层的专用线程返回给用户。</p>
+<p><img src="//weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/SQL%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B.png" alt="SQL语句执行流程"></p>
+<h1 id="MySQL的逻辑结构（操作对象）"><a href="#MySQL的逻辑结构（操作对象）" class="headerlink" title="MySQL的逻辑结构（操作对象）"></a>MySQL的逻辑结构（操作对象）</h1><p>MySQL</p>
+<p>库： 库名 + 库属性</p>
+<p>表： 表名 + 表属性 + 表内容 + 列</p>
+<p><img src="//weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/SQL%E9%80%BB%E8%BE%91.png" alt="SQL逻辑"></p>
+<h1 id="MySQL的物理存储结构"><a href="#MySQL的物理存储结构" class="headerlink" title="MySQL的物理存储结构"></a>MySQL的物理存储结构</h1><ul>
+<li><p>扇区：基本存储单元，表示一段<strong>连续</strong>的磁盘空间，顺序IO</p>
+</li>
+<li><p>block: 由Linux文件系统提供的存储单元，默认4kb，由<strong>连续</strong>的8个扇区组成。 </p>
+</li>
+<li><p>页（page）：MySQL最小存储单元，默认16kb，由4个<strong>连续</strong>的block组成</p>
+</li>
+<li><p>区/簇（extent）：MySQL定义的存储单元，默认1Mb, 由64个<strong>连续</strong>的页组成。</p>
+</li>
+<li><p>段：一个表就是一个段，包含一个或多个区</p>
+</li>
+</ul>
+<p><img src="//weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/SQL%E7%89%A9%E7%90%86.png" alt="SQL物理"></p>
+<h2 id="MySQL存储结构的意义"><a href="#MySQL存储结构的意义" class="headerlink" title="MySQL存储结构的意义"></a>MySQL存储结构的意义</h2><p>实现聚簇索引，利于SQL的优化，提升检索效率</p>
+
     </article>
     <!-- license  -->
     
@@ -412,7 +472,7 @@ height:50vh;
             <p>原文作者：<a href="https://weikuoguo.github.io">W.K.</a>
             <p>原文链接：<a href="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/">https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/</a>
             <p>发表日期：<a href="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/">August 14th 2020, 9:20:28 am</a>
-            <p>更新日期：<a href="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/">August 14th 2020, 9:20:28 am</a>
+            <p>更新日期：<a href="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/">August 14th 2020, 9:24:38 am</a>
             <p>版权声明：Copyright © 2019-2020 W.K. All rights reserved.</p>
         </div>
     
@@ -543,7 +603,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL-客户端-服务器工作模型（C-S）"><span class="toc-number">1.</span> <span class="toc-text">MySQL 客户端/服务器工作模型（C/S）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器端实例的概念"><span class="toc-number">2.</span> <span class="toc-text">服务器端实例的概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mysqld的程序结构"><span class="toc-number">3.</span> <span class="toc-text">mysqld的程序结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL的逻辑结构（操作对象）"><span class="toc-number">4.</span> <span class="toc-text">MySQL的逻辑结构（操作对象）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL的物理存储结构"><span class="toc-number">5.</span> <span class="toc-text">MySQL的物理存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL存储结构的意义"><span class="toc-number">5.1.</span> <span class="toc-text">MySQL存储结构的意义</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -556,6 +616,10 @@ top:50vh;
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
     
     
     
