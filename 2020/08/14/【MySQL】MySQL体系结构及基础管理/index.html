@@ -20,22 +20,23 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content>
-    <meta name="description" content="MySQL 客户端/服务器工作模型（C/S） MySQL服务器端与客户端通过CSS命令连接，形成C/S模型MySQL服务器进行管理。 连接方式有：  本地scoket连接方式：只能在本地使用不依赖IP和端口  12socket=/tmp/mysql.sockmysql -S /tmp/mysql.sock   TCP/IP方式（远程、本地）：  1mysql -uroot -poldboy123">
+    <meta name="description" content="MySQL 客户端/服务器工作模型（C/S）MySQL服务器端与客户端通过CSS命令连接，形成C/S模型MySQL服务器进行管理。 连接方式有：  本地scoket连接方式：只能在本地使用不依赖IP和端口  12socket=/tmp/mysql.sockmysql -S /tmp/mysql.sock   TCP/IP方式（远程、本地）：  1mysql -uroot -poldboy123 -">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【MySQL】MySQL体系结构及基础管理">
 <meta property="og:url" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/index.html">
 <meta property="og:site_name" content="虾仁饭的异想世界">
-<meta property="og:description" content="MySQL 客户端/服务器工作模型（C/S） MySQL服务器端与客户端通过CSS命令连接，形成C/S模型MySQL服务器进行管理。 连接方式有：  本地scoket连接方式：只能在本地使用不依赖IP和端口  12socket=/tmp/mysql.sockmysql -S /tmp/mysql.sock   TCP/IP方式（远程、本地）：  1mysql -uroot -poldboy123">
+<meta property="og:description" content="MySQL 客户端/服务器工作模型（C/S）MySQL服务器端与客户端通过CSS命令连接，形成C/S模型MySQL服务器进行管理。 连接方式有：  本地scoket连接方式：只能在本地使用不依赖IP和端口  12socket=/tmp/mysql.sockmysql -S /tmp/mysql.sock   TCP/IP方式（远程、本地）：  1mysql -uroot -poldboy123 -">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/MySQLCS%E6%A8%A1%E5%9E%8B.png">
 <meta property="og:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/MySQL%E5%AE%9E%E4%BE%8B.png">
 <meta property="og:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/SQL%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B.png">
 <meta property="og:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/SQL%E9%80%BB%E8%BE%91.png">
 <meta property="og:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/SQL%E7%89%A9%E7%90%86.png">
-<meta property="og:updated_time" content="2020-08-14T01:24:38.031Z">
+<meta property="og:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/MySQL%E8%BF%9E%E6%8E%A5%E7%AE%A1%E7%90%86.png">
+<meta property="og:updated_time" content="2020-08-20T08:28:25.401Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【MySQL】MySQL体系结构及基础管理">
-<meta name="twitter:description" content="MySQL 客户端/服务器工作模型（C/S） MySQL服务器端与客户端通过CSS命令连接，形成C/S模型MySQL服务器进行管理。 连接方式有：  本地scoket连接方式：只能在本地使用不依赖IP和端口  12socket=/tmp/mysql.sockmysql -S /tmp/mysql.sock   TCP/IP方式（远程、本地）：  1mysql -uroot -poldboy123">
+<meta name="twitter:description" content="MySQL 客户端/服务器工作模型（C/S）MySQL服务器端与客户端通过CSS命令连接，形成C/S模型MySQL服务器进行管理。 连接方式有：  本地scoket连接方式：只能在本地使用不依赖IP和端口  12socket=/tmp/mysql.sockmysql -S /tmp/mysql.sock   TCP/IP方式（远程、本地）：  1mysql -uroot -poldboy123 -">
 <meta name="twitter:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/MySQLCS%E6%A8%A1%E5%9E%8B.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -284,7 +285,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">715</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">2.7k</span>阅读时长: <span class="post-count reading-time">12 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -413,8 +414,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="MySQL-客户端-服务器工作模型（C-S）"><a href="#MySQL-客户端-服务器工作模型（C-S）" class="headerlink" title="MySQL 客户端/服务器工作模型（C/S）"></a>MySQL 客户端/服务器工作模型（C/S）</h1><p><img src="//weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/MySQLCS%E6%A8%A1%E5%9E%8B.png" alt="MySQLCS"></p>
-<p>MySQL服务器端与客户端通过CSS命令连接，形成C/S模型MySQL服务器进行管理。</p>
+        <h1 id="MySQL-客户端-服务器工作模型（C-S）"><a href="#MySQL-客户端-服务器工作模型（C-S）" class="headerlink" title="MySQL 客户端/服务器工作模型（C/S）"></a>MySQL 客户端/服务器工作模型（C/S）</h1><p>MySQL服务器端与客户端通过CSS命令连接，形成C/S模型MySQL服务器进行管理。</p>
 <p>连接方式有：</p>
 <ol>
 <li>本地scoket连接方式：只能在本地使用不依赖IP和端口</li>
@@ -426,6 +426,7 @@ height:50vh;
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -poldboy123 -h 10.0.0.51 -P3306</span><br></pre></td></tr></table></figure>
 
+<p><img src="//weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/MySQLCS%E6%A8%A1%E5%9E%8B.png" alt="MySQLCS"></p>
 <h1 id="服务器端实例的概念"><a href="#服务器端实例的概念" class="headerlink" title="服务器端实例的概念"></a>服务器端实例的概念</h1><p>实例：mysqld后台守护进程 + Master Thread + 干活的Thread + 预分配的内存</p>
 <p>类比：公司 = 老板 + 经理 + 员工 + 办公室</p>
 <p>功能：管理数据</p>
@@ -464,6 +465,183 @@ height:50vh;
 </ul>
 <p><img src="//weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/SQL%E7%89%A9%E7%90%86.png" alt="SQL物理"></p>
 <h2 id="MySQL存储结构的意义"><a href="#MySQL存储结构的意义" class="headerlink" title="MySQL存储结构的意义"></a>MySQL存储结构的意义</h2><p>实现聚簇索引，利于SQL的优化，提升检索效率</p>
+<h1 id="MySQL基础管理"><a href="#MySQL基础管理" class="headerlink" title="MySQL基础管理"></a>MySQL基础管理</h1><h2 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h2><ol>
+<li>用户的作用</li>
+</ol>
+<p>登录MySQL数据库，管理MySQL对象（表）</p>
+<ol start="2">
+<li>用户的定义</li>
+</ol>
+<p>用户名@’白名单’</p>
+<p>白名单的意义：一个地址列表，允许在列表中的IO登录MySQL，管理MySQL</p>
+<p>oldguo@’localhost’: oldguo用户能够通过本地登录MySQL（socker）<br>oldguo@’10.0.0.10’: oldguo用户只能通过10.0.0.10远程登录MySQL服务器<br>oldguo@’10.0.0.%’: oldguo用户只能通过10.0.0.xx/24远程登录MySQL服务器<br>oldguo@’10.0.0.5%’: oldguo用户只能通过10.0.0.50-59远程登录MySQL服务器<br>oldguo@’10.0.0.0/255.255.254.0’: oldguo用户只能通过255.255.254.0网关登录MySQL数据库服务器<br>oldguo@’%’: oldguo用户能通过所有IP登录。</p>
+<ol start="3">
+<li>用户的管理</li>
+</ol>
+<p>查询用户：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">select user, host, authentication_string from mysql.user;  </span><br><span class="line">+---------------+-----------+-------------------------------------------+</span><br><span class="line">| user          | host      | authentication_string                     |</span><br><span class="line">+---------------+-----------+-------------------------------------------+</span><br><span class="line">| root          | localhost |                                           |</span><br><span class="line">| mysql.session | localhost | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |</span><br><span class="line">| mysql.sys     | localhost | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |</span><br><span class="line">+---------------+-----------+-------------------------------------------+</span><br></pre></td></tr></table></figure>
+
+<p>增加用户：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">create user oldguo@&apos;localhost&apos;; \\创建无密码用户</span><br><span class="line">create user oldguo@&apos;localhost&apos; identified by &apos;123&apos;; \\创建有密码的用户</span><br></pre></td></tr></table></figure>
+
+<p>修改用户：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter user oldguo@&apos;localhost&apos; identified by &apos;456&apos;;</span><br></pre></td></tr></table></figure>
+
+<p>删除用户：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop user oldguo@&apos;localhost&apos;;</span><br></pre></td></tr></table></figure>
+
+<p>注意：8.0版本以前，是可以通过grant命令建立用户并授权，8.0版本后必须先建立用户后授权。</p>
+<h2 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h2><ol>
+<li>作用</li>
+</ol>
+<p>使某些用户对数据库对象有哪些管理能力。</p>
+<ol start="2">
+<li>MySQL权限的表现方式</li>
+</ol>
+<p>具体的命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">musql&gt; show privileges;</span><br><span class="line"></span><br><span class="line">+-------------------------+---------------------------------------+-------------------------------------------------------+</span><br><span class="line">| Privilege               | Context                               | Comment                                               |</span><br><span class="line">+-------------------------+---------------------------------------+-------------------------------------------------------+</span><br><span class="line">| Alter                   | Tables                                | To alter the table                                    |</span><br><span class="line">| Alter routine           | Functions,Procedures                  | To alter or drop stored functions/procedures          |</span><br><span class="line">| Create                  | Databases,Tables,Indexes              | To create new databases and tables                    |</span><br><span class="line">| Create routine          | Databases                             | To use CREATE FUNCTION/PROCEDURE                      |</span><br><span class="line">| Create temporary tables | Databases                             | To use CREATE TEMPORARY TABLE                         |</span><br><span class="line">| Create view             | Tables                                | To create new views                                   |</span><br><span class="line">| Create user             | Server Admin                          | To create new users                                   |</span><br><span class="line">| Delete                  | Tables                                | To delete existing rows                               |</span><br><span class="line">| Drop                    | Databases,Tables                      | To drop databases, tables, and views                  |</span><br><span class="line">| Event                   | Server Admin                          | To create, alter, drop and execute events             |</span><br><span class="line">| Execute                 | Functions,Procedures                  | To execute stored routines                            |</span><br><span class="line">| File                    | File access on server                 | To read and write files on the server                 |</span><br><span class="line">| Grant option            | Databases,Tables,Functions,Procedures | To give to other users those privileges you possess   |</span><br><span class="line">| Index                   | Tables                                | To create or drop indexes                             |</span><br><span class="line">| Insert                  | Tables                                | To insert data into tables                            |</span><br><span class="line">| Lock tables             | Databases                             | To use LOCK TABLES (together with SELECT privilege)   |</span><br><span class="line">| Process                 | Server Admin                          | To view the plain text of currently executing queries |</span><br><span class="line">| Proxy                   | Server Admin                          | To make proxy user possible                           |</span><br><span class="line">| References              | Databases,Tables                      | To have references on tables                          |</span><br><span class="line">| Reload                  | Server Admin                          | To reload or refresh tables, logs and privileges      |</span><br><span class="line">| Replication client      | Server Admin                          | To ask where the slave or master servers are          |</span><br><span class="line">| Replication slave       | Server Admin                          | To read binary log events from the master             |</span><br><span class="line">| Select                  | Tables                                | To retrieve rows from table                           |</span><br><span class="line">| Show databases          | Server Admin                          | To see all databases with SHOW DATABASES              |</span><br><span class="line">| Show view               | Tables                                | To see views with SHOW CREATE VIEW                    |</span><br><span class="line">| Shutdown                | Server Admin                          | To shut down the server                               |</span><br><span class="line">| Super                   | Server Admin                          | To use KILL thread, SET GLOBAL, CHANGE MASTER, etc.   |</span><br><span class="line">| Trigger                 | Tables                                | To use triggers                                       |</span><br><span class="line">| Create tablespace       | Server Admin                          | To create/alter/drop tablespaces                      |</span><br><span class="line">| Update                  | Tables                                | To update existing rows                               |</span><br><span class="line">| Usage                   | Server Admin                          | No privileges - allow connect only                    |</span><br><span class="line">+-------------------------+---------------------------------------+-------------------------------------------------------+</span><br><span class="line">31 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>授权和回收权限操作</li>
+</ol>
+<p><strong>语法：</strong></p>
+<p>8.0前：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grant 权限 on 对象 to 用户 identified by &apos;密码&apos;;</span><br></pre></td></tr></table></figure>
+
+<p>8.0后：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create 用户 identified by &apos;密码&apos;;</span><br></pre></td></tr></table></figure>
+
+<p>grant 权限1,权限2,权限3 on 对象 to 用户;</p>
+<p><strong>权限:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ALL: 管理员</span><br><span class="line">权限1,权限2,权限3：普通用户（业务用户，开发用户）</span><br><span class="line">Grant option：给别的用户授权的权利</span><br></pre></td></tr></table></figure>
+
+<p><strong>对象：库，表</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*.*         ---&gt; chomd -R 755 /             对库内全部文件授权</span><br><span class="line">oldguo.*    ---&gt; chomd -R 755 /oldguo       对oldguo下的全部文件授权</span><br><span class="line">oldguo.t1   ---&gt; chomd -R 755 /oldguo/t1    对oldguo下t1表授权</span><br><span class="line">oldguo.t1(列)   ---&gt;  对oldguo下t1表的某一列进行授权</span><br></pre></td></tr></table></figure>
+
+<p><strong>实例：</strong></p>
+<p>例1：创建并授权管理员用户，能够通过10.0.0.%网段登录并管理数据库。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">grant all on *.* to oldguo3@&apos;10.0.0.%&apos; identified by &apos;123&apos; with grant option;</span><br><span class="line"></span><br><span class="line">show grants for oldguo3@&apos;10.0.0.%&apos;; //查询用户权限</span><br><span class="line">-----------------------------------------------------------------------+</span><br><span class="line">| Grants for oldguo3@10.0.0.%                                           |</span><br><span class="line">+-----------------------------------------------------------------------+</span><br><span class="line">| GRANT ALL PRIVILEGES ON *.* TO &apos;oldguo3&apos;@&apos;10.0.0.%&apos; WITH GRANT OPTION |</span><br><span class="line">+-----------------------------------------------------------------------+</span><br><span class="line"></span><br><span class="line">select * from mysql.user\G; //查询用户权限</span><br></pre></td></tr></table></figure>
+
+<p>例2：创建并授权一个app@’10.0.0.%’的业务用户，能够对app库下所有对象进行create, select, update, delete, insert操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">grant create,select,update,delete,insert on app.* to app@&apos;10.0.0.%&apos; identified by &apos;789&apos;;</span><br><span class="line"></span><br><span class="line">select * from mysql.db\G; //查询用户权限</span><br></pre></td></tr></table></figure>
+
+<p>扩展：MySQL不同级别授权表存放位置</p>
+<p>user            : <em>.</em><br>db              : app.*<br>tables_priv:    : app.t1<br>columns_priv:   : 列</p>
+<p><strong>回收权限：</strong></p>
+<p>MySQL中不能通过重复授权的方式修改权限，只能通过回收权限对已授权的用户权限进行修改。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">revoke create on app.* from app@&apos;10.0.0.%&apos;</span><br></pre></td></tr></table></figure>
+
+<p><strong>超级管理员密码忘记了：</strong></p>
+<p>–skip-grant-tables: 跳过授权表</p>
+<p>–skip-networking: 跳过TCP/IP连接</p>
+<p>步骤：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">1 关闭数据库</span><br><span class="line">systemctl stop mysqld</span><br><span class="line"></span><br><span class="line">2 使用安全模式启动</span><br><span class="line">mysql_safe --skip-grant-tables --skip-networking</span><br><span class="line">service mysqld start --skip-grant-tables --skip-networking</span><br><span class="line"></span><br><span class="line">3 登录数据库并修改密码</span><br><span class="line"></span><br><span class="line">mysql&gt; flush privileges; \\手动加载授权表</span><br><span class="line"></span><br><span class="line">mysql&gt; alter user root@&apos;localhost&apos; identified by &apos;123&apos;;</span><br><span class="line"></span><br><span class="line">4 重启数据库到正常模式</span><br></pre></td></tr></table></figure>
+
+<h2 id="MySQL连接管理"><a href="#MySQL连接管理" class="headerlink" title="MySQL连接管理"></a>MySQL连接管理</h2><p><strong>MySQL自带客户端</strong></p>
+<p>mysql:</p>
+<p>参数列表：</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-u</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>密码</td>
+</tr>
+<tr>
+<td>-S</td>
+<td>本地Socket文件位置</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>数据库IP地址</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>数据库端口号</td>
+</tr>
+<tr>
+<td>-e</td>
+<td>免交互执行数据库命令</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>导入SQL脚本</td>
+</tr>
+</tbody></table>
+<p><strong>Socket连接</strong>：</p>
+<pre><code>前提：必须实现授权localhost登录
+
+mysql -u用户名（默认root） -p密码 -S位置（默认/tmp/mysql.sock）</code></pre><p><strong>TCP/IP连接</strong>：</p>
+<pre><code>前提：必须提前创建好可以远程连接的用户
+
+mysql -u用户名（默认root） -p密码 -h IP地址 -P 端口号（默认3306）</code></pre><p>注意：可以通过show processlist;查看是通过哪种方式连接的。</p>
+<p><strong>程序连接</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install -y php-mysql</span><br><span class="line">pip3 install pymysql</span><br></pre></td></tr></table></figure>
+
+<p><img src="//weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/MySQL%E8%BF%9E%E6%8E%A5%E7%AE%A1%E7%90%86.png" alt="MySQL连接管理"></p>
+<h2 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a>初始化配置</h2><p><strong>方式</strong></p>
+<ol>
+<li><p>源码安装时，编译过程中设置初始化参数</p>
+</li>
+<li><p>配置文件，数据库启动之前，设定配置文件参数。（/etc/my.cnf）</p>
+</li>
+<li><p>启动脚本命令行，例如mysql_safe –skip-grant-tables –skip-networking</p>
+</li>
+</ol>
+<p><strong>配置文件应用</strong></p>
+<ol>
+<li>配置文件读取顺序</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入指令：</span><br><span class="line">mysqld --help --verbose | grep my.cnf</span><br><span class="line"></span><br><span class="line">得到返回结果：</span><br><span class="line">/etc/my.cnf /etc/mysql/my.cnf /usr/local/mysql/etc/my.cnf ~/.my.cnf</span><br></pre></td></tr></table></figure>
+
+<p>mysql会按照上面返回结果中路径的顺序依次寻找配置文件。如果文件同时存在，则后读取的配置文件生效。</p>
+<p>如果需要手工定制配置文件地址，可以使用“–defaults-file”, 例如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --defaults-file=/opt/my.cnf</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>配置文件的书写格式</li>
+</ol>
+<p>带[  ]的是标签项，用于区分不同程序的参数。</p>
+<p>常见标签：[mysqld] [mysqld] [server] [mysql] [mysqldump] [client] </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]                        \\ 标签项 服务器端标签，负责数据库服务端运行参数设定</span><br><span class="line">user=mysql                      \\ 负责数据库管理用户</span><br><span class="line">basedir=/app/database/mysql     \\ 软件的安装位置</span><br><span class="line">datadir=/data/3306              \\ 数据的存放位置</span><br><span class="line">server_id=6                     \\ 标识节点的唯一编号，主从有用</span><br><span class="line">port=3306                       \\ 端口号</span><br><span class="line">socket=/tmp/mysql.sock          \\ 套接字文件</span><br><span class="line">[mysql]                         \\ 标签项 客户端标签，负责本地客户连接管理，与远程连接无关</span><br><span class="line">socket=/tmp/mysql.sock          \\ 本地登录时读取socket文件的位置</span><br></pre></td></tr></table></figure>
+
+<p>补充说明：命令行中输入的参数优先级高于配置文件中的参数。</p>
+<h2 id="启动和关闭"><a href="#启动和关闭" class="headerlink" title="启动和关闭"></a>启动和关闭</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.../mysql/bin/mysqld &amp;          \\ 自带启动mysql的命令</span><br><span class="line">.../mysql/bin/mysqld_safe &amp;     \\ 自带启动mysql的命令,允许用户进行一些个性化配置</span><br><span class="line"></span><br><span class="line">service mysqld start/stop/restart    \\ 通过调用 ./support-files/mysql.server，实现管理</span><br><span class="line">systemctl start/stop/restart mysqld  \\ 通过调用 ./support-files/mysql.server，实现管理</span><br><span class="line"></span><br><span class="line">mysqladmin -u*** -p*** shutdown       \\ 关闭数据库</span><br><span class="line">mysql&gt; shutdown;</span><br></pre></td></tr></table></figure>
+
+<h2 id="MySQL多实例"><a href="#MySQL多实例" class="headerlink" title="MySQL多实例"></a>MySQL多实例</h2><h3 id="同版本多实例"><a href="#同版本多实例" class="headerlink" title="同版本多实例"></a>同版本多实例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">准备：</span><br><span class="line">n个配置文件:        mkdir -p /data/330&#123;7,8,9&#125;/my.cnf</span><br><span class="line">n个数据目录：       mkdir -p /data/330&#123;7,8,9&#125;/data</span><br><span class="line">n个日志目录：       mkdir -p /binlog/330&#123;7,8,9&#125;/</span><br><span class="line">n个socket文件：     /tmp/mysql330&#123;7,8,9&#125;.sock</span><br><span class="line">n个端口：           port = 3307,3308,3309</span><br><span class="line">n个server_id：      7,8,9</span><br><span class="line">初始化数据n次：</span><br></pre></td></tr></table></figure>
+
+<p>配置过程：</p>
+<ol>
+<li><p>创建目录</p>
+</li>
+<li><p>创建配置文件：</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cat &gt; /data/3307/my.cnf &lt;&lt;EOF</span><br><span class="line">[mysqld]</span><br><span class="line">basedir=/app/database/mysql</span><br><span class="line">datadir=/data/3307/data</span><br><span class="line">socket=/tmp/mysql3307.sock</span><br><span class="line">log_error=/data/3307/mysql.log</span><br><span class="line">port=3307</span><br><span class="line">server_id=7</span><br><span class="line">log_bin=/binlog/3307/mysql-bin</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>初始化数据</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv /etc/my.cnf /etc/my.cnf.bak \\将原始的配置文件暂时清除</span><br><span class="line">mysqld --initialize-insecure  --user=mysql --datadir=/data/3307/data --basedir=/app/database/mysql</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>使用systemd管理mysql</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">cat &gt;/etc/systemd/system/mysqld3307.service &lt;&lt;EOF</span><br><span class="line">[Unit]</span><br><span class="line">Description = MySQL Server</span><br><span class="line">Documentation=man:mysqld(8)</span><br><span class="line">Documentation=https://dev.mysql.com/doc/refman/8.0/en/using-systemd.html</span><br><span class="line">After=network.target</span><br><span class="line">After=syslog.target</span><br><span class="line">[Install]</span><br><span class="line">WantedBy = multi-user.target</span><br><span class="line">[Service]</span><br><span class="line">User=mysql</span><br><span class="line">Group=mysql</span><br><span class="line">ExecStart=/app/database/mysql/bin/mysqld/ --defaults-file=/data/3307/my.cnf</span><br><span class="line">LimitNOFILE=5000</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>启动多实例</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld3307</span><br><span class="line"></span><br><span class="line">netstat -tulnp</span><br><span class="line"></span><br><span class="line">tcp6       0      0 :::3307                 :::*                    LISTEN      25552/mysqld</span><br></pre></td></tr></table></figure>
+
 
     </article>
     <!-- license  -->
@@ -472,7 +650,7 @@ height:50vh;
             <p>原文作者：<a href="https://weikuoguo.github.io">W.K.</a>
             <p>原文链接：<a href="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/">https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/</a>
             <p>发表日期：<a href="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/">August 14th 2020, 9:20:28 am</a>
-            <p>更新日期：<a href="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/">August 14th 2020, 9:24:38 am</a>
+            <p>更新日期：<a href="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/">August 20th 2020, 4:28:25 pm</a>
             <p>版权声明：Copyright © 2019-2020 W.K. All rights reserved.</p>
         </div>
     
@@ -603,7 +781,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL-客户端-服务器工作模型（C-S）"><span class="toc-number">1.</span> <span class="toc-text">MySQL 客户端/服务器工作模型（C/S）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器端实例的概念"><span class="toc-number">2.</span> <span class="toc-text">服务器端实例的概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mysqld的程序结构"><span class="toc-number">3.</span> <span class="toc-text">mysqld的程序结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL的逻辑结构（操作对象）"><span class="toc-number">4.</span> <span class="toc-text">MySQL的逻辑结构（操作对象）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL的物理存储结构"><span class="toc-number">5.</span> <span class="toc-text">MySQL的物理存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL存储结构的意义"><span class="toc-number">5.1.</span> <span class="toc-text">MySQL存储结构的意义</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL-客户端-服务器工作模型（C-S）"><span class="toc-number">1.</span> <span class="toc-text">MySQL 客户端/服务器工作模型（C/S）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器端实例的概念"><span class="toc-number">2.</span> <span class="toc-text">服务器端实例的概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mysqld的程序结构"><span class="toc-number">3.</span> <span class="toc-text">mysqld的程序结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL的逻辑结构（操作对象）"><span class="toc-number">4.</span> <span class="toc-text">MySQL的逻辑结构（操作对象）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL的物理存储结构"><span class="toc-number">5.</span> <span class="toc-text">MySQL的物理存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL存储结构的意义"><span class="toc-number">5.1.</span> <span class="toc-text">MySQL存储结构的意义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL基础管理"><span class="toc-number">6.</span> <span class="toc-text">MySQL基础管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#用户管理"><span class="toc-number">6.1.</span> <span class="toc-text">用户管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#权限管理"><span class="toc-number">6.2.</span> <span class="toc-text">权限管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL连接管理"><span class="toc-number">6.3.</span> <span class="toc-text">MySQL连接管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化配置"><span class="toc-number">6.4.</span> <span class="toc-text">初始化配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动和关闭"><span class="toc-number">6.5.</span> <span class="toc-text">启动和关闭</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL多实例"><span class="toc-number">6.6.</span> <span class="toc-text">MySQL多实例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#同版本多实例"><span class="toc-number">6.6.1.</span> <span class="toc-text">同版本多实例</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
