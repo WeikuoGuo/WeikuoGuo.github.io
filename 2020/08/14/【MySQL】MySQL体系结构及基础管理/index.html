@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/SQL%E9%80%BB%E8%BE%91.png">
 <meta property="og:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/SQL%E7%89%A9%E7%90%86.png">
 <meta property="og:image" content="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/MySQL%E8%BF%9E%E6%8E%A5%E7%AE%A1%E7%90%86.png">
-<meta property="og:updated_time" content="2020-08-20T08:28:25.401Z">
+<meta property="og:updated_time" content="2020-08-20T08:39:26.004Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【MySQL】MySQL体系结构及基础管理">
 <meta name="twitter:description" content="MySQL 客户端/服务器工作模型（C/S）MySQL服务器端与客户端通过CSS命令连接，形成C/S模型MySQL服务器进行管理。 连接方式有：  本地scoket连接方式：只能在本地使用不依赖IP和端口  12socket=/tmp/mysql.sockmysql -S /tmp/mysql.sock   TCP/IP方式（远程、本地）：  1mysql -uroot -poldboy123 -">
@@ -427,11 +427,11 @@ height:50vh;
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -poldboy123 -h 10.0.0.51 -P3306</span><br></pre></td></tr></table></figure>
 
 <p><img src="//weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/MySQLCS%E6%A8%A1%E5%9E%8B.png" alt="MySQLCS"></p>
-<h1 id="服务器端实例的概念"><a href="#服务器端实例的概念" class="headerlink" title="服务器端实例的概念"></a>服务器端实例的概念</h1><p>实例：mysqld后台守护进程 + Master Thread + 干活的Thread + 预分配的内存</p>
+<h2 id="服务器端实例的概念"><a href="#服务器端实例的概念" class="headerlink" title="服务器端实例的概念"></a>服务器端实例的概念</h2><p>实例：mysqld后台守护进程 + Master Thread + 干活的Thread + 预分配的内存</p>
 <p>类比：公司 = 老板 + 经理 + 员工 + 办公室</p>
 <p>功能：管理数据</p>
 <p><img src="//weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/MySQL%E5%AE%9E%E4%BE%8B.png" alt="MySQL实例"></p>
-<h1 id="mysqld的程序结构"><a href="#mysqld的程序结构" class="headerlink" title="mysqld的程序结构"></a>mysqld的程序结构</h1><p>一条SQL语句的执行过程</p>
+<h2 id="mysqld的程序结构"><a href="#mysqld的程序结构" class="headerlink" title="mysqld的程序结构"></a>mysqld的程序结构</h2><p>一条SQL语句的执行过程</p>
 <ol>
 <li>连接层</li>
 </ol>
@@ -447,11 +447,11 @@ height:50vh;
 </ol>
 <p>负责根据SQL层执行的结果，从磁盘上拿数据。将16进制的磁盘数据，交由SQL结构化化成表，连接层的专用线程返回给用户。</p>
 <p><img src="//weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/SQL%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B.png" alt="SQL语句执行流程"></p>
-<h1 id="MySQL的逻辑结构（操作对象）"><a href="#MySQL的逻辑结构（操作对象）" class="headerlink" title="MySQL的逻辑结构（操作对象）"></a>MySQL的逻辑结构（操作对象）</h1><p>MySQL</p>
+<h2 id="MySQL的逻辑结构（操作对象）"><a href="#MySQL的逻辑结构（操作对象）" class="headerlink" title="MySQL的逻辑结构（操作对象）"></a>MySQL的逻辑结构（操作对象）</h2><p>MySQL</p>
 <p>库： 库名 + 库属性</p>
 <p>表： 表名 + 表属性 + 表内容 + 列</p>
 <p><img src="//weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/SQL%E9%80%BB%E8%BE%91.png" alt="SQL逻辑"></p>
-<h1 id="MySQL的物理存储结构"><a href="#MySQL的物理存储结构" class="headerlink" title="MySQL的物理存储结构"></a>MySQL的物理存储结构</h1><ul>
+<h2 id="MySQL的物理存储结构"><a href="#MySQL的物理存储结构" class="headerlink" title="MySQL的物理存储结构"></a>MySQL的物理存储结构</h2><ul>
 <li><p>扇区：基本存储单元，表示一段<strong>连续</strong>的磁盘空间，顺序IO</p>
 </li>
 <li><p>block: 由Linux文件系统提供的存储单元，默认4kb，由<strong>连续</strong>的8个扇区组成。 </p>
@@ -464,7 +464,7 @@ height:50vh;
 </li>
 </ul>
 <p><img src="//weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/SQL%E7%89%A9%E7%90%86.png" alt="SQL物理"></p>
-<h2 id="MySQL存储结构的意义"><a href="#MySQL存储结构的意义" class="headerlink" title="MySQL存储结构的意义"></a>MySQL存储结构的意义</h2><p>实现聚簇索引，利于SQL的优化，提升检索效率</p>
+<h3 id="MySQL存储结构的意义"><a href="#MySQL存储结构的意义" class="headerlink" title="MySQL存储结构的意义"></a>MySQL存储结构的意义</h3><p>实现聚簇索引，利于SQL的优化，提升检索效率</p>
 <h1 id="MySQL基础管理"><a href="#MySQL基础管理" class="headerlink" title="MySQL基础管理"></a>MySQL基础管理</h1><h2 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h2><ol>
 <li>用户的作用</li>
 </ol>
@@ -509,9 +509,8 @@ height:50vh;
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grant 权限 on 对象 to 用户 identified by &apos;密码&apos;;</span><br></pre></td></tr></table></figure>
 
 <p>8.0后：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create 用户 identified by &apos;密码&apos;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">create 用户 identified by &apos;密码&apos;;</span><br><span class="line">grant 权限1,权限2,权限3 on 对象 to 用户;</span><br></pre></td></tr></table></figure>
 
-<p>grant 权限1,权限2,权限3 on 对象 to 用户;</p>
 <p><strong>权限:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ALL: 管理员</span><br><span class="line">权限1,权限2,权限3：普通用户（业务用户，开发用户）</span><br><span class="line">Grant option：给别的用户授权的权利</span><br></pre></td></tr></table></figure>
 
@@ -526,7 +525,8 @@ height:50vh;
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">grant create,select,update,delete,insert on app.* to app@&apos;10.0.0.%&apos; identified by &apos;789&apos;;</span><br><span class="line"></span><br><span class="line">select * from mysql.db\G; //查询用户权限</span><br></pre></td></tr></table></figure>
 
 <p>扩展：MySQL不同级别授权表存放位置</p>
-<p>user            : <em>.</em><br>db              : app.*<br>tables_priv:    : app.t1<br>columns_priv:   : 列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">user            : *.*</span><br><span class="line"></span><br><span class="line">db              : app.*</span><br><span class="line"></span><br><span class="line">tables_priv:    : app.t1</span><br><span class="line"></span><br><span class="line">columns_priv:   : 列</span><br></pre></td></tr></table></figure>
+
 <p><strong>回收权限：</strong></p>
 <p>MySQL中不能通过重复授权的方式修改权限，只能通过回收权限对已授权的用户权限进行修改。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">revoke create on app.* from app@&apos;10.0.0.%&apos;</span><br></pre></td></tr></table></figure>
@@ -650,7 +650,7 @@ mysql -u用户名（默认root） -p密码 -h IP地址 -P 端口号（默认3306
             <p>原文作者：<a href="https://weikuoguo.github.io">W.K.</a>
             <p>原文链接：<a href="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/">https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/</a>
             <p>发表日期：<a href="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/">August 14th 2020, 9:20:28 am</a>
-            <p>更新日期：<a href="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/">August 20th 2020, 4:28:25 pm</a>
+            <p>更新日期：<a href="https://weikuoguo.github.io/2020/08/14/【MySQL】MySQL体系结构及基础管理/">August 20th 2020, 4:39:26 pm</a>
             <p>版权声明：Copyright © 2019-2020 W.K. All rights reserved.</p>
         </div>
     
@@ -781,7 +781,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL-客户端-服务器工作模型（C-S）"><span class="toc-number">1.</span> <span class="toc-text">MySQL 客户端/服务器工作模型（C/S）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器端实例的概念"><span class="toc-number">2.</span> <span class="toc-text">服务器端实例的概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mysqld的程序结构"><span class="toc-number">3.</span> <span class="toc-text">mysqld的程序结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL的逻辑结构（操作对象）"><span class="toc-number">4.</span> <span class="toc-text">MySQL的逻辑结构（操作对象）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL的物理存储结构"><span class="toc-number">5.</span> <span class="toc-text">MySQL的物理存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL存储结构的意义"><span class="toc-number">5.1.</span> <span class="toc-text">MySQL存储结构的意义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL基础管理"><span class="toc-number">6.</span> <span class="toc-text">MySQL基础管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#用户管理"><span class="toc-number">6.1.</span> <span class="toc-text">用户管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#权限管理"><span class="toc-number">6.2.</span> <span class="toc-text">权限管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL连接管理"><span class="toc-number">6.3.</span> <span class="toc-text">MySQL连接管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化配置"><span class="toc-number">6.4.</span> <span class="toc-text">初始化配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动和关闭"><span class="toc-number">6.5.</span> <span class="toc-text">启动和关闭</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL多实例"><span class="toc-number">6.6.</span> <span class="toc-text">MySQL多实例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#同版本多实例"><span class="toc-number">6.6.1.</span> <span class="toc-text">同版本多实例</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL-客户端-服务器工作模型（C-S）"><span class="toc-number">1.</span> <span class="toc-text">MySQL 客户端/服务器工作模型（C/S）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#服务器端实例的概念"><span class="toc-number">1.1.</span> <span class="toc-text">服务器端实例的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mysqld的程序结构"><span class="toc-number">1.2.</span> <span class="toc-text">mysqld的程序结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL的逻辑结构（操作对象）"><span class="toc-number">1.3.</span> <span class="toc-text">MySQL的逻辑结构（操作对象）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL的物理存储结构"><span class="toc-number">1.4.</span> <span class="toc-text">MySQL的物理存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL存储结构的意义"><span class="toc-number">1.4.1.</span> <span class="toc-text">MySQL存储结构的意义</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL基础管理"><span class="toc-number">2.</span> <span class="toc-text">MySQL基础管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#用户管理"><span class="toc-number">2.1.</span> <span class="toc-text">用户管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#权限管理"><span class="toc-number">2.2.</span> <span class="toc-text">权限管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL连接管理"><span class="toc-number">2.3.</span> <span class="toc-text">MySQL连接管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化配置"><span class="toc-number">2.4.</span> <span class="toc-text">初始化配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动和关闭"><span class="toc-number">2.5.</span> <span class="toc-text">启动和关闭</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL多实例"><span class="toc-number">2.6.</span> <span class="toc-text">MySQL多实例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#同版本多实例"><span class="toc-number">2.6.1.</span> <span class="toc-text">同版本多实例</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
