@@ -20,17 +20,22 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Ϻ�ʷ�����������">
-<meta property="og:url" content="https://weikuoguo.github.io/archives/2020/09/index.html">
+    <meta name="description" content="CSS3中背景图样式拓展基本使用： background-size: 背景图的尺寸大小  cover: 覆盖：等比放大或缩小，直至将全部容器填满，溢出部分隐藏。 contain：包含：等比放大或缩小，直至背景图全部被包含在容器内无溢出。   background-origin：背景图的填充位置  padding-box(默认)：从padding部分开始填充 border-box：从border部分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【HTML&#x2F;CSS】CSS3背景样式拓展&#x2F;渐变&#x2F;icon-face">
+<meta property="og:url" content="https://weikuoguo.github.io/%E3%80%90HTML-CSS%E3%80%91CSS3%E8%83%8C%E6%99%AF%E6%A0%B7%E5%BC%8F%E6%8B%93%E5%B1%95-%E6%B8%90%E5%8F%98-icon-face/index.html">
 <meta property="og:site_name" content="Ϻ�ʷ�����������">
+<meta property="og:description" content="CSS3中背景图样式拓展基本使用： background-size: 背景图的尺寸大小  cover: 覆盖：等比放大或缩小，直至将全部容器填满，溢出部分隐藏。 contain：包含：等比放大或缩小，直至背景图全部被包含在容器内无溢出。   background-origin：背景图的填充位置  padding-box(默认)：从padding部分开始填充 border-box：从border部分">
 <meta property="og:locale">
+<meta property="article:published_time" content="2020-07-27T06:48:12.000Z">
+<meta property="article:modified_time" content="2023-08-01T10:41:21.389Z">
 <meta property="article:author" content="W.K.">
+<meta property="article:tag" content="HTML&#x2F;CSS学习笔记">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>虾仁饭の异想世界.</title>
+    <title>【HTML/CSS】CSS3背景样式拓展/渐变/icon-face · 虾仁饭の异想世界.</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -211,12 +216,23 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >虾仁饭の异想世界.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">【HTML/CSS】CSS3背景样式拓展/渐变/icon-face</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>虾仁饭の异想世界.</a>
 </header>
@@ -228,24 +244,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            【HTML/CSS】CSS3背景样式拓展/渐变/icon-face
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "HTML/CSS学习笔记">HTML/CSS学习笔记</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">991</span>阅读时长: <span class="post-count reading-time">4 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/07/27</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -346,112 +412,174 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/%E3%80%90MySQL%E3%80%91CentOS7-SQL%E8%AF%AD%E5%8F%A5%E4%B9%8B-DDL%EF%BC%8CDML%EF%BC%8CDQL/" >
-            
-                <span>【MySQL】CentOS7 SQL语句之 DDL，DML，DQL</span>
-        </a>
-        <div class="abstract-content">
-            DDL 数据定义语言库定义库名，库属性
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="CSS3中背景图样式拓展"><a href="#CSS3中背景图样式拓展" class="headerlink" title="CSS3中背景图样式拓展"></a>CSS3中背景图样式拓展</h1><h2 id="基本使用："><a href="#基本使用：" class="headerlink" title="基本使用："></a>基本使用：</h2><ol>
+<li><p><strong>background-size</strong>: 背景图的尺寸大小</p>
+<ul>
+<li>cover: 覆盖：等比放大或缩小，直至将全部容器填满，溢出部分隐藏。</li>
+<li>contain：包含：等比放大或缩小，直至背景图全部被包含在容器内无溢出。</li>
+</ul>
+</li>
+<li><p><strong>background-origin</strong>：背景图的填充位置</p>
+<ul>
+<li>padding-box(默认)：从padding部分开始填充</li>
+<li>border-box：从border部分开始填充</li>
+<li>content-box：从content部分开始填充</li>
+</ul>
+</li>
+<li><p><strong>background-clip</strong>: 背景图的裁切方式</p>
+<ul>
+<li>padding-box：保留padding内部的内容</li>
+<li>border-box(默认)：保留border内部的内容</li>
+<li>content-box：保留content内部的内容</li>
+</ul>
+</li>
+</ol>
+<p><strong>注意</strong>: 可以写到background的复合样式里，若origin与clip同时需要声明，则前面的代表位置，后面的代表裁切方式。</p>
+<h1 id="CSS3-渐变"><a href="#CSS3-渐变" class="headerlink" title="CSS3 渐变"></a>CSS3 渐变</h1><h2 id="基本使用：-1"><a href="#基本使用：-1" class="headerlink" title="基本使用："></a>基本使用：</h2><ol>
+<li><p><strong>linear-gradient</strong>: 线性渐变(是一个值，需要加到background-image上)</p>
+<ul>
+<li>point || angle 注：渐变的0度是在页面的下方，正值按顺时针旋转</li>
+<li>color</li>
+<li>percentage 注：控制从何处开始发生渐变，是一个百分数</li>
+</ul>
+</li>
+</ol>
+<p>例：background-image: linear-gradient(to right,green 25%, red 75%)</p>
+<ol start="2">
+<li><p><strong>radial-gradient</strong>: 径向渐变 从中心向四周渐变</p>
+<ul>
+<li>point</li>
+<li>color</li>
+<li>percentage</li>
+</ul>
+</li>
+</ol>
+<h2 id="Demo-渐变实现进度条："><a href="#Demo-渐变实现进度条：" class="headerlink" title="Demo: 渐变实现进度条："></a>Demo: 渐变实现进度条：</h2><h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    .jindutiao&#123;width: 300px;height: 30px; border: #999 1px solid; margin: 30px auto;background-image: linear-gradient(to right top, #999 25%,#080 25%, #080 50%,#999 50%,#999 75%,#080 75%); background-size: 30px; animation: move infinite 5s linear;&#125;</span><br><span class="line">    @keyframes move&#123;</span><br><span class="line">        0%&#123;background-position: 0 0;&#125;</span><br><span class="line">        100%&#123;background-position: 300px 0;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;jindutiao&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
-创建库：CREATE DATABASE 库名 CHARSET utf8mb4;
+<h3 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h3><div class="jindutiao">
+</div>
 
+<h1 id="CSS3-font-face模块"><a href="#CSS3-font-face模块" class="headerlink" title="CSS3 font-face模块"></a>CSS3 font-face模块</h1><p>font-face是CSS3中的一个模块，它主要的作用是把自己定义的web字体嵌入到网页中。</p>
+<p><strong>优点</strong>：</p>
+<ol>
+<li>可以非常方便的改变字体大小和颜色（font-size, color)</li>
+<li>放大后不会失真</li>
+<li>减少请求次数和提高加载速度</li>
+<li>简化网页布局</li>
+<li>减少设计师和前端工程师的工作量</li>
+<li>可以使用计算机没有提供的字体</li>
+</ol>
+<p><strong>使用</strong>：@font-face{font-family: <em>name</em>; scr: url(https:&#x2F;&#x2F;_______)}</p>
+<p>div{font-family:<em>name</em>}</p>
+<ul>
+<li>注：.woff等文件都是做兼容平台处理的，mac，linux等</li>
+</ul>
+<h2 id="iconfont矢量图标库"><a href="#iconfont矢量图标库" class="headerlink" title="iconfont矢量图标库:"></a><strong>iconfont矢量图标库</strong>:</h2><p><a target="_blank" rel="noopener" href="https://www.iconfont.cn/">https://www.iconfont.cn/</a></p>
+<p>使用：</p>
+<ol>
+<li>选择图标，添加购物车</li>
+<li>加入项目</li>
+<li>下载到本地或生成在线代码</li>
+<li>引入iconfont.css文件：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;./iconfont/iconfont.css&quot;&gt;</span><br></pre></td></tr></table></figure>
 
-库名小写，与业务有关，不要数字开头，库名不要太长, 不要使用保留字段。
+<ol start="4">
+<li>为相应图标添加类名称：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span class=&quot;iconfont icon-icon-test&quot;&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure>
 
+<p>注：若所要添加的图标为彩色图标，则需要额外引入iconfont.js文件。引入方式选择demo.html中的第三种：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    .icon &#123;</span><br><span class="line">        width: 1em;</span><br><span class="line">        height: 1em;</span><br><span class="line">        vertical-align: -0.15em;</span><br><span class="line">        fill: currentColor;</span><br><span class="line">        overflow: hidden;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;svg class=&quot;icon&quot; aria-hidden=&quot;true&quot;&gt;</span><br><span class="line">    &lt;use xlink:href=&quot;#icon-weixin&quot;&gt;&lt;/use&gt;</span><br><span class="line">&lt;/svg&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Demo-inconfont展示"><a href="#Demo-inconfont展示" class="headerlink" title="Demo: inconfont展示"></a>Demo: inconfont展示</h2><h3 id="代码：-1"><a href="#代码：-1" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://at.alicdn.com/t/font_1968743_0gr6m7cnkucn.css&quot;&gt;</span><br><span class="line">&lt;script src=&quot;https://at.alicdn.com/t/font_1968743_0gr6m7cnkucn.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">    .icon &#123;</span><br><span class="line">        width: 1em;</span><br><span class="line">        height: 1em;</span><br><span class="line">        vertical-align: -0.15em;</span><br><span class="line">        fill: currentColor;</span><br><span class="line">        overflow: hidden;</span><br><span class="line">    &#125;</span><br><span class="line">    .demo2&#123;margin: 30px;&#125;</span><br><span class="line">    .demo2 span&#123;font-size: 26px; margin: 10px;&#125;</span><br><span class="line">    .demo2 svg&#123; font-size: 26px;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;demo2&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;iconfont icon-icon-test&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;iconfont icon-icon-test1&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;iconfont icon-icon-test2&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;iconfont icon-icon-test3&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;svg class=&quot;icon&quot; aria-hidden=&quot;true&quot;&gt;</span><br><span class="line">        &lt;use xlink:href=&quot;#icon-weixin&quot;&gt;&lt;/use&gt;</span><br><span class="line">    &lt;/svg&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+<h3 id="效果：-1"><a href="#效果：-1" class="headerlink" title="效果："></a>效果：</h3><div class="demo2">
+    <span class="iconfont icon-icon-test"></span>
+    <span class="iconfont icon-icon-test1"></span>
+    <span class="iconfont icon-icon-test2"></span>
+    <span class="iconfont icon-icon-test3"></span>
+    <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-weixin"/>
+    </svg>
+</div>
 
-必须定制字符集。
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1968743_0gr6m7cnkucn.css">
+<script src="https://at.alicdn.com/t/font_1968743_0gr6m7cnkucn.js"></script>
 
+<style>
+    .jindutiao{width: 300px;height: 30px; border: #999 1px solid; margin: 30px auto;background-image: linear-gradient(to right top, #999 25%,#080 25%, #080 50%,#999 50%,#999 75%,#080 75%); background-size: 30px; animation: move infinite 5s linear;}
+    @keyframes move{
+        0%{background-position: 0 0;}
+        100%{background-position: 300px 0;}
+    }
 
-查询库: show databases; show create database 库名; (查询建库语句)
+    .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
+    .demo2{margin: 30px;}
+    .demo2 span{font-size: 26px; margin: 10px;}
+    .demo2 svg{ font-size: 26px;}
+</style>
 
-修改库：alter database 库名 charset utf8;
+<h2 id="自定义字体图标"><a href="#自定义字体图标" class="headerlink" title="自定义字体图标"></a>自定义字体图标</h2><p><a target="_blank" rel="noopener" href="https://icomoon.io/app/">https://icomoon.io/app/</a> : 在线生成字体图标(涉及SVG相关知识)</p>
+<ul>
+<li>大致步骤：上传.svg文件，生成后下载相关文件。</li>
+</ul>
 
-
-注意，修改后的字符集应当比修改前更大，是前者的严格超集，否则出现乱码。
-
-
-删除库：drop database 库名;
-
-
-注意：生产数据库中除了管理员没有任何人有删库权限。
-
-
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/03</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/%E3%80%90MySQL%E3%80%91CentOS7-SQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5/" >
-            
-                <span>【MySQL】CentOS7 SQL基础语句</span>
-        </a>
-        <div class="abstract-content">
-            MySQL基础语法之SQL基础SQL介绍
-SQL 指结构化查询语言
-
-SQL 使我们有能力访问数据库
-
-SQL 是一种 ANSI 的标准计算机语言，是关系型数据库中通用的一类语言
-
-
-SQL常用类型
-mysql客户端自带的语句 用help指令查看
-
-Server端命令，用help content指令查看，常用的Server端命令有：
-
-
-DDL: 数据定义语言
-
-
-
-DCL: 数据控制语言
-
-
-
-DML: 数据操作语言
-
-
-
-DQL: 数据查询语言
-
-
-
-SQL的各种名词sql_mode&#x2F;SQL模式: 作用是规范SQL语句书写方式。&emsp;&emsp;&emsp;&emsp...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://weikuoguo.github.io">W.K.</a>
+            <p>原文链接：<a href="https://weikuoguo.github.io/%E3%80%90HTML-CSS%E3%80%91CSS3%E8%83%8C%E6%99%AF%E6%A0%B7%E5%BC%8F%E6%8B%93%E5%B1%95-%E6%B8%90%E5%8F%98-icon-face/">https://weikuoguo.github.io/【HTML-CSS】CSS3背景样式拓展-渐变-icon-face/</a>
+            <p>发表日期：<a href="https://weikuoguo.github.io/%E3%80%90HTML-CSS%E3%80%91CSS3%E8%83%8C%E6%99%AF%E6%A0%B7%E5%BC%8F%E6%8B%93%E5%B1%95-%E6%B8%90%E5%8F%98-icon-face/">July 27th 2020, 2:48:12 pm</a>
+            <p>更新日期：<a href="https://weikuoguo.github.io/%E3%80%90HTML-CSS%E3%80%91CSS3%E8%83%8C%E6%99%AF%E6%A0%B7%E5%BC%8F%E6%8B%93%E5%B1%95-%E6%B8%90%E5%8F%98-icon-face/">August 1st 2023, 6:41:21 pm</a>
+            <p>版权声明：Copyright © 2019-2020 W.K. All rights reserved.</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/03</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/%E3%80%90HTML-CSS%E3%80%91CSS3%E9%98%B4%E5%BD%B1-%E9%81%AE%E7%BD%A9-%E5%80%92%E5%BD%B1-%E6%A8%A1%E7%B3%8A%E4%B8%8E%E8%AE%A1%E7%AE%97-%E5%88%86%E6%A0%8F-%E8%AE%A1%E7%AE%97-%E4%BC%AA%E5%85%83%E7%B4%A0%E4%B8%8E%E4%BC%AA%E7%B1%BB/" title= "【HTML/CSS】CSS3阴影/遮罩/倒影/模糊与计算/分栏/计算/伪元素与伪类">
+                    <div class="nextTitle">【HTML/CSS】CSS3阴影/遮罩/倒影/模糊与计算/分栏/计算/伪元素与伪类</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/%E3%80%90HTML-CSS%E3%80%91animation%E5%8A%A8%E7%94%BB/" title= "【HTML/CSS】animation动画">
+                    <div class="prevTitle">【HTML/CSS】animation动画</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -531,6 +659,24 @@ SQL的各种名词sql_mode&#x2F;SQL模式: 作用是规范SQL语句书写方式�
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS3%E4%B8%AD%E8%83%8C%E6%99%AF%E5%9B%BE%E6%A0%B7%E5%BC%8F%E6%8B%93%E5%B1%95"><span class="toc-number">1.</span> <span class="toc-text">CSS3中背景图样式拓展</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">基本使用：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS3-%E6%B8%90%E5%8F%98"><span class="toc-number">2.</span> <span class="toc-text">CSS3 渐变</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%EF%BC%9A-1"><span class="toc-number">2.1.</span> <span class="toc-text">基本使用：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo-%E6%B8%90%E5%8F%98%E5%AE%9E%E7%8E%B0%E8%BF%9B%E5%BA%A6%E6%9D%A1%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">Demo: 渐变实现进度条：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="toc-number">2.2.1.</span> <span class="toc-text">代码：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%EF%BC%9A"><span class="toc-number">2.2.2.</span> <span class="toc-text">效果：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS3-font-face%E6%A8%A1%E5%9D%97"><span class="toc-number">3.</span> <span class="toc-text">CSS3 font-face模块</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#iconfont%E7%9F%A2%E9%87%8F%E5%9B%BE%E6%A0%87%E5%BA%93"><span class="toc-number">3.1.</span> <span class="toc-text">iconfont矢量图标库:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo-inconfont%E5%B1%95%E7%A4%BA"><span class="toc-number">3.2.</span> <span class="toc-text">Demo: inconfont展示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%EF%BC%9A-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">代码：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%EF%BC%9A-1"><span class="toc-number">3.2.2.</span> <span class="toc-text">效果：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87"><span class="toc-number">3.3.</span> <span class="toc-text">自定义字体图标</span></a></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -931,6 +1077,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

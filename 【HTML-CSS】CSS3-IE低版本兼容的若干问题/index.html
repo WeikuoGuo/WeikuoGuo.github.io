@@ -20,17 +20,22 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Ϻ�ʷ�����������">
-<meta property="og:url" content="https://weikuoguo.github.io/archives/2020/09/index.html">
+    <meta name="description" content="CSS HackCSS Hack用来解决浏览器的兼容问题，为不同版本的浏览器定制编写不同的CSS效果，使用每个浏览器的单独识别的样式代码，控制浏览器的显示样式。 CSS Hack分类：  CSS属性前缀法: 在CSS样式属性名前加上一些只有特定浏览器才能识别的hack前缀，以达到预期的页面展现效果。     前缀标识 兼容浏览器    _ IE6   +, * IE6, IE7   \9 IE6,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【HTML&#x2F;CSS】CSS3 IE低版本兼容的若干问题">
+<meta property="og:url" content="https://weikuoguo.github.io/%E3%80%90HTML-CSS%E3%80%91CSS3-IE%E4%BD%8E%E7%89%88%E6%9C%AC%E5%85%BC%E5%AE%B9%E7%9A%84%E8%8B%A5%E5%B9%B2%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Ϻ�ʷ�����������">
+<meta property="og:description" content="CSS HackCSS Hack用来解决浏览器的兼容问题，为不同版本的浏览器定制编写不同的CSS效果，使用每个浏览器的单独识别的样式代码，控制浏览器的显示样式。 CSS Hack分类：  CSS属性前缀法: 在CSS样式属性名前加上一些只有特定浏览器才能识别的hack前缀，以达到预期的页面展现效果。     前缀标识 兼容浏览器    _ IE6   +, * IE6, IE7   \9 IE6,">
 <meta property="og:locale">
+<meta property="article:published_time" content="2020-07-28T04:05:24.000Z">
+<meta property="article:modified_time" content="2023-08-01T10:41:21.388Z">
 <meta property="article:author" content="W.K.">
+<meta property="article:tag" content="HTML&#x2F;CSS学习笔记">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>虾仁饭の异想世界.</title>
+    <title>【HTML/CSS】CSS3 IE低版本兼容的若干问题 · 虾仁饭の异想世界.</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -211,12 +216,23 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >虾仁饭の异想世界.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">【HTML/CSS】CSS3 IE低版本兼容的若干问题</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>虾仁饭の异想世界.</a>
 </header>
@@ -228,24 +244,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            【HTML/CSS】CSS3 IE低版本兼容的若干问题
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "HTML/CSS学习笔记">HTML/CSS学习笔记</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">512</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/07/28</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -346,112 +412,155 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/%E3%80%90MySQL%E3%80%91CentOS7-SQL%E8%AF%AD%E5%8F%A5%E4%B9%8B-DDL%EF%BC%8CDML%EF%BC%8CDQL/" >
-            
-                <span>【MySQL】CentOS7 SQL语句之 DDL，DML，DQL</span>
-        </a>
-        <div class="abstract-content">
-            DDL 数据定义语言库定义库名，库属性
-
-创建库：CREATE DATABASE 库名 CHARSET utf8mb4;
-
-
-库名小写，与业务有关，不要数字开头，库名不要太长, 不要使用保留字段。
-
-
-
-必须定制字符集。
-
-
-查询库: show databases; show create database 库名; (查询建库语句)
-
-修改库：alter database 库名 charset utf8;
-
-
-注意，修改后的字符集应当比修改前更大，是前者的严格超集，否则出现乱码。
-
-
-删除库：drop database 库名;
-
-
-注意：生产数据库中除了管理员没有任何人有删库权限。
-
-
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/03</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="CSS-Hack"><a href="#CSS-Hack" class="headerlink" title="CSS Hack"></a>CSS Hack</h1><p>CSS Hack用来解决浏览器的兼容问题，为不同版本的浏览器定制编写不同的CSS效果，使用每个浏览器的单独识别的样式代码，控制浏览器的显示样式。</p>
+<p>CSS Hack分类：</p>
+<ol>
+<li><strong>CSS属性前缀法</strong>: 在CSS样式属性名前加上一些只有特定浏览器才能识别的hack前缀，以达到预期的页面展现效果。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center"><div style="width: 100pt">前缀标识</div></th>
+<th align="center">兼容浏览器</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">_</td>
+<td align="center">IE6</td>
+</tr>
+<tr>
+<td align="center">+, *</td>
+<td align="center">IE6, IE7</td>
+</tr>
+<tr>
+<td align="center">\9</td>
+<td align="center">IE6, IE7, IE8, IE9</td>
+</tr>
+<tr>
+<td align="center">\0</td>
+<td align="center">IE8, IE9, IE10, IE11</td>
+</tr>
+</tbody></table>
+<p>例：.elem{ _width : 10px } .elem{ width : 10px\9}</p>
+<ol start="2">
+<li><strong>选择器前缀法</strong>：针对一些页面表现不一致或需要特殊对待的浏览器，在CSS选择器前加上一些只有某些特定浏览器才能识别的前缀进行hack。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center"><div style="width: 100pt">前缀标识</div></th>
+<th align="center">兼容浏览器</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">*html</td>
+<td align="center">IE6</td>
+</tr>
+<tr>
+<td align="center">*+html</td>
+<td align="center">IE7</td>
+</tr>
+<tr>
+<td align="center">:root</td>
+<td align="center">IE9以上及现代浏览器</td>
+</tr>
+</tbody></table>
+<p>例：*html .elem{…}</p>
+<ol start="3">
+<li><strong>IE条件注释法</strong>：IE浏览器专有的Hack方式，微软官方推荐使用的hack方式。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center"><div style="width: 100pt">注释标识</div></th>
+<th align="center">兼容浏览器</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&lt;!–[if IE]&gt;…&lt;![endif]–&gt;</td>
+<td align="center">IE</td>
+</tr>
+<tr>
+<td align="center">&lt;!–[if IE7]&gt;…&lt;![endif]–&gt;</td>
+<td align="center">IE7</td>
+</tr>
+<tr>
+<td align="center">&lt;!–[if lte(gte) IE7]&gt;…&lt;![endif]–&gt;</td>
+<td align="center">IE7以下(以上)</td>
+</tr>
+<tr>
+<td align="center">&lt;!–[if ！IE7]&gt;…&lt;![endif]–&gt;</td>
+<td align="center">非IE7</td>
+</tr>
+</tbody></table>
+<p>模拟IE低版本测试工具：IEtest.</p>
+<h1 id="IE低版本常见Bug"><a href="#IE低版本常见Bug" class="headerlink" title="IE低版本常见Bug:"></a>IE低版本常见Bug:</h1><p>由于旧浏览器设计上有很多缺陷，导致产生一些BUG, 所以针对这些问题需要作出兼容处理。</p>
+<p>常见的兼容问题：</p>
+<ul>
+<li><p><strong>透明度</strong>(IE8及以下)：filter:alpha(opacity-50)</p>
+</li>
+<li><p><strong>双边距</strong>(IE6+浮动+左边距+block): _display:inline</p>
+</li>
+<li><p><strong>最小高度</strong>(IE6最小高度是19px): overflow:hidden </p>
+</li>
+<li><p><strong>图片边框</strong>(IE8以下为图片加链接): border:none</p>
+</li>
+</ul>
+<h1 id="渐进增强与优雅降级"><a href="#渐进增强与优雅降级" class="headerlink" title="渐进增强与优雅降级"></a>渐进增强与优雅降级</h1><p><strong>渐进增强</strong>：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果，交互等改进和追加功能达到更好的用户体验。</p>
+<p><strong>优雅降级</strong>：一开始就构建完整功能，然后再针对低版本浏览器进行兼容。</p>
+<style>
+    table th:first-of-type {width: 7cm;}
+</style>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/%E3%80%90MySQL%E3%80%91CentOS7-SQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5/" >
-            
-                <span>【MySQL】CentOS7 SQL基础语句</span>
-        </a>
-        <div class="abstract-content">
-            MySQL基础语法之SQL基础SQL介绍
-SQL 指结构化查询语言
-
-SQL 使我们有能力访问数据库
-
-SQL 是一种 ANSI 的标准计算机语言，是关系型数据库中通用的一类语言
-
-
-SQL常用类型
-mysql客户端自带的语句 用help指令查看
-
-Server端命令，用help content指令查看，常用的Server端命令有：
-
-
-DDL: 数据定义语言
-
-
-
-DCL: 数据控制语言
-
-
-
-DML: 数据操作语言
-
-
-
-DQL: 数据查询语言
-
-
-
-SQL的各种名词sql_mode&#x2F;SQL模式: 作用是规范SQL语句书写方式。&emsp;&emsp;&emsp;&emsp...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://weikuoguo.github.io">W.K.</a>
+            <p>原文链接：<a href="https://weikuoguo.github.io/%E3%80%90HTML-CSS%E3%80%91CSS3-IE%E4%BD%8E%E7%89%88%E6%9C%AC%E5%85%BC%E5%AE%B9%E7%9A%84%E8%8B%A5%E5%B9%B2%E9%97%AE%E9%A2%98/">https://weikuoguo.github.io/【HTML-CSS】CSS3-IE低版本兼容的若干问题/</a>
+            <p>发表日期：<a href="https://weikuoguo.github.io/%E3%80%90HTML-CSS%E3%80%91CSS3-IE%E4%BD%8E%E7%89%88%E6%9C%AC%E5%85%BC%E5%AE%B9%E7%9A%84%E8%8B%A5%E5%B9%B2%E9%97%AE%E9%A2%98/">July 28th 2020, 12:05:24 pm</a>
+            <p>更新日期：<a href="https://weikuoguo.github.io/%E3%80%90HTML-CSS%E3%80%91CSS3-IE%E4%BD%8E%E7%89%88%E6%9C%AC%E5%85%BC%E5%AE%B9%E7%9A%84%E8%8B%A5%E5%B9%B2%E9%97%AE%E9%A2%98/">August 1st 2023, 6:41:21 pm</a>
+            <p>版权声明：Copyright © 2019-2020 W.K. All rights reserved.</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/03</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/%E3%80%90HTML-CSS%E3%80%91%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B9%8BFlex-%E4%B8%8E-Grid/" title= "【HTML/CSS】移动端之Flex 与 Grid">
+                    <div class="nextTitle">【HTML/CSS】移动端之Flex 与 Grid</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/%E3%80%90HTML-CSS%E3%80%91CSS3%E9%98%B4%E5%BD%B1-%E9%81%AE%E7%BD%A9-%E5%80%92%E5%BD%B1-%E6%A8%A1%E7%B3%8A%E4%B8%8E%E8%AE%A1%E7%AE%97-%E5%88%86%E6%A0%8F-%E8%AE%A1%E7%AE%97-%E4%BC%AA%E5%85%83%E7%B4%A0%E4%B8%8E%E4%BC%AA%E7%B1%BB/" title= "【HTML/CSS】CSS3阴影/遮罩/倒影/模糊与计算/分栏/计算/伪元素与伪类">
+                    <div class="prevTitle">【HTML/CSS】CSS3阴影/遮罩/倒影/模糊与计算/分栏/计算/伪元素与伪类</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -531,6 +640,24 @@ SQL的各种名词sql_mode&#x2F;SQL模式: 作用是规范SQL语句书写方式�
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS-Hack"><span class="toc-number">1.</span> <span class="toc-text">CSS Hack</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IE%E4%BD%8E%E7%89%88%E6%9C%AC%E5%B8%B8%E8%A7%81Bug"><span class="toc-number">2.</span> <span class="toc-text">IE低版本常见Bug:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B8%90%E8%BF%9B%E5%A2%9E%E5%BC%BA%E4%B8%8E%E4%BC%98%E9%9B%85%E9%99%8D%E7%BA%A7"><span class="toc-number">3.</span> <span class="toc-text">渐进增强与优雅降级</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -931,6 +1058,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

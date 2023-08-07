@@ -20,17 +20,25 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Ϻ�ʷ�����������">
-<meta property="og:url" content="https://weikuoguo.github.io/archives/2020/09/index.html">
+    <meta name="description" content="Viewport 视口在移动端，viewport视口就是浏览器现实页面内容的屏幕区域。在viewport视口中有两种视口，分别表示为：visual viewport(可视视口)和layout viewport(布局视口)。 visual viewport固定大小跟屏幕大小相同，在上面；而layout viewport可改变大小，在下面。layout viewport默认大小为980像素，可通过do">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【HTML&#x2F;CSS】移动端之流式布局与rem布局">
+<meta property="og:url" content="https://weikuoguo.github.io/%E3%80%90HTML-CSS%E3%80%91%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B9%8B%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8Erem%E5%B8%83%E5%B1%80/index.html">
 <meta property="og:site_name" content="Ϻ�ʷ�����������">
+<meta property="og:description" content="Viewport 视口在移动端，viewport视口就是浏览器现实页面内容的屏幕区域。在viewport视口中有两种视口，分别表示为：visual viewport(可视视口)和layout viewport(布局视口)。 visual viewport固定大小跟屏幕大小相同，在上面；而layout viewport可改变大小，在下面。layout viewport默认大小为980像素，可通过do">
 <meta property="og:locale">
+<meta property="og:image" content="https://weikuoguo.github.io/%E3%80%90HTML-CSS%E3%80%91%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B9%8B%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8Erem%E5%B8%83%E5%B1%80/%E6%B5%81%E5%BC%8F%E7%AD%89%E6%AF%94.jpg">
+<meta property="og:image" content="https://weikuoguo.github.io/%E3%80%90HTML-CSS%E3%80%91%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B9%8B%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8Erem%E5%B8%83%E5%B1%80/%E6%B5%81%E5%BC%8F%E5%8E%9F%E5%88%99.jpg">
+<meta property="article:published_time" content="2020-08-04T02:17:44.000Z">
+<meta property="article:modified_time" content="2023-08-01T10:41:21.394Z">
 <meta property="article:author" content="W.K.">
+<meta property="article:tag" content="HTML&#x2F;CSS学习笔记">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://weikuoguo.github.io/%E3%80%90HTML-CSS%E3%80%91%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B9%8B%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8Erem%E5%B8%83%E5%B1%80/%E6%B5%81%E5%BC%8F%E7%AD%89%E6%AF%94.jpg">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>虾仁饭の异想世界.</title>
+    <title>【HTML/CSS】移动端之流式布局与rem布局 · 虾仁饭の异想世界.</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -211,12 +219,23 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >虾仁饭の异想世界.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">【HTML/CSS】移动端之流式布局与rem布局</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>虾仁饭の异想世界.</a>
 </header>
@@ -228,24 +247,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            【HTML/CSS】移动端之流式布局与rem布局
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "HTML/CSS学习笔记">HTML/CSS学习笔记</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">628</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/08/04</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -346,112 +415,128 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/%E3%80%90MySQL%E3%80%91CentOS7-SQL%E8%AF%AD%E5%8F%A5%E4%B9%8B-DDL%EF%BC%8CDML%EF%BC%8CDQL/" >
-            
-                <span>【MySQL】CentOS7 SQL语句之 DDL，DML，DQL</span>
-        </a>
-        <div class="abstract-content">
-            DDL 数据定义语言库定义库名，库属性
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="Viewport-视口"><a href="#Viewport-视口" class="headerlink" title="Viewport 视口"></a>Viewport 视口</h1><p>在移动端，viewport视口就是浏览器现实页面内容的屏幕区域。在viewport视口中有两种视口，分别表示为：visual viewport(可视视口)和layout viewport(布局视口)。</p>
+<p>visual viewport固定大小跟屏幕大小相同，在上面；而layout viewport可改变大小，在下面。layout viewport默认大小为980像素，可通过document.documentElement.clientWidth获取。</p>
+<p>现代网页制作需要讲layout viewport设置成跟visual viewport等同大小，方便进行网页制作。</p>
+<h2 id="viewport-设置"><a href="#viewport-设置" class="headerlink" title="viewport 设置"></a>viewport 设置</h2><p>通过<meta>标签进行设置，name属性指定viewport值，content属性进行视口配置。</p>
+<table>
+<thead>
+<tr>
+<th>取值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>width</td>
+<td>设置layout viewport的宽度特定值，device-width表示设备宽</td>
+</tr>
+<tr>
+<td>height</td>
+<td>设置layout viewport的高度特定值，一般不进行设置</td>
+</tr>
+<tr>
+<td>initial-scale</td>
+<td>设置页面初始缩放</td>
+</tr>
+<tr>
+<td>minimum-scale</td>
+<td>设置页面最小缩放</td>
+</tr>
+<tr>
+<td>maximum-scale</td>
+<td>设置页面最大缩放</td>
+</tr>
+<tr>
+<td>user-scalable</td>
+<td>设置页面能否进行缩放</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width initial-scale=1.0 user-scalable=no&quot; &gt;</span><br></pre></td></tr></table></figure>
 
-创建库：CREATE DATABASE 库名 CHARSET utf8mb4;
+<h1 id="移动端适配方案"><a href="#移动端适配方案" class="headerlink" title="移动端适配方案"></a>移动端适配方案</h1><ol>
+<li><p>百分比布局，也叫流式布局。代表网站：优酷、百度、天猫、腾讯。</p>
+</li>
+<li><p>等比缩放布局，也叫rem布局。代表网站：网易、爱奇艺、淘宝、美团。</p>
+</li>
+</ol>
+<p><img src="/%E3%80%90HTML-CSS%E3%80%91%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B9%8B%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8Erem%E5%B8%83%E5%B1%80/%E6%B5%81%E5%BC%8F%E7%AD%89%E6%AF%94.jpg" alt="流式等比"></p>
+<h2 id="流式布局原则"><a href="#流式布局原则" class="headerlink" title="流式布局原则"></a>流式布局原则</h2><p><img src="/%E3%80%90HTML-CSS%E3%80%91%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B9%8B%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8Erem%E5%B8%83%E5%B1%80/%E6%B5%81%E5%BC%8F%E5%8E%9F%E5%88%99.jpg" alt="流式原则"></p>
+<p>好处：大屏幕下显示更多内容</p>
+<p>坏处：宽屏下，比例会有一些不协调</p>
+<h2 id="rem布局"><a href="#rem布局" class="headerlink" title="rem布局"></a>rem布局</h2><p>单位：</p>
+<ul>
+<li><p>em: 是一个相对单位，1em等于当前元素或父元素的font-size值。</p>
+</li>
+<li><p>rem: 是一个相对单位，1rem等于根元素的font-size值。</p>
+</li>
+<li><p>vw&#x2F;vh: 把屏幕分成100份，1vw等于屏幕宽的1%。</p>
+</li>
+</ul>
+<p><strong>原理</strong>：根据不同的设备大小，设置不同的root-font-size，在写样式的时候，利用同一套以rem为单位的元素进行布局，实现自适应的相对大小布局。</p>
+<p><strong>动态设置font-size</strong>：</p>
+<h3 id="通过JS"><a href="#通过JS" class="headerlink" title="通过JS"></a>通过JS</h3><style>
+    table th:first-of-type {width: 4cm;}
+</style>
 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">      &lt;script&gt;</span><br><span class="line">            // layout viewport : document.documentElement.clientWidth</span><br><span class="line">            // iphone6 : 375px</span><br><span class="line">            // iphone6 plus: 414px</span><br><span class="line"></span><br><span class="line">            // iphone6 : 375px</span><br><span class="line">            // iphone6 plus: 414px</span><br><span class="line"></span><br><span class="line">            // iphone6 : document.documentElement.clientWidth / 3.75 = 100</span><br><span class="line">            // iphone6 plus: document.documentElement.clientWidth /3.75 = 110.4</span><br><span class="line"></span><br><span class="line">            var fontSize = document.documentElement.clientWidth / 3.75;</span><br><span class="line">            document.documentElement.style.fontSize = fontSize + &#x27;px&#x27;</span><br><span class="line">      &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 
-库名小写，与业务有关，不要数字开头，库名不要太长, 不要使用保留字段。
+<p>rem与px相互转化的工具：px to rem 在 VS code商店搜索并安装后，设置浏览器font-size，选中px为单位的数值，alt+z便可以自动转换。支持多个目标的同时转换。</p>
+<h3 id="通过vw"><a href="#通过vw" class="headerlink" title="通过vw"></a>通过vw</h3><p>通过设置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html&#123;font-size:26.6666667vw;&#125;</span><br></pre></td></tr></table></figure>
 
+<p>实现不同设备的自适应。</p>
+<p>注： 要给body重置一下默认的font-size: 16px</p>
 
-
-必须定制字符集。
-
-
-查询库: show databases; show create database 库名; (查询建库语句)
-
-修改库：alter database 库名 charset utf8;
-
-
-注意，修改后的字符集应当比修改前更大，是前者的严格超集，否则出现乱码。
-
-
-删除库：drop database 库名;
-
-
-注意：生产数据库中除了管理员没有任何人有删库权限。
-
-
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/03</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/%E3%80%90MySQL%E3%80%91CentOS7-SQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5/" >
-            
-                <span>【MySQL】CentOS7 SQL基础语句</span>
-        </a>
-        <div class="abstract-content">
-            MySQL基础语法之SQL基础SQL介绍
-SQL 指结构化查询语言
-
-SQL 使我们有能力访问数据库
-
-SQL 是一种 ANSI 的标准计算机语言，是关系型数据库中通用的一类语言
-
-
-SQL常用类型
-mysql客户端自带的语句 用help指令查看
-
-Server端命令，用help content指令查看，常用的Server端命令有：
-
-
-DDL: 数据定义语言
-
-
-
-DCL: 数据控制语言
-
-
-
-DML: 数据操作语言
-
-
-
-DQL: 数据查询语言
-
-
-
-SQL的各种名词sql_mode&#x2F;SQL模式: 作用是规范SQL语句书写方式。&emsp;&emsp;&emsp;&emsp...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://weikuoguo.github.io">W.K.</a>
+            <p>原文链接：<a href="https://weikuoguo.github.io/%E3%80%90HTML-CSS%E3%80%91%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B9%8B%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8Erem%E5%B8%83%E5%B1%80/">https://weikuoguo.github.io/【HTML-CSS】移动端之流式布局与rem布局/</a>
+            <p>发表日期：<a href="https://weikuoguo.github.io/%E3%80%90HTML-CSS%E3%80%91%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B9%8B%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8Erem%E5%B8%83%E5%B1%80/">August 4th 2020, 10:17:44 am</a>
+            <p>更新日期：<a href="https://weikuoguo.github.io/%E3%80%90HTML-CSS%E3%80%91%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B9%8B%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8Erem%E5%B8%83%E5%B1%80/">August 1st 2023, 6:41:21 pm</a>
+            <p>版权声明：Copyright © 2019-2020 W.K. All rights reserved.</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/03</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/%E3%80%90HTML-CSS%E3%80%91%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%B9%8B%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E4%B8%8EBootstrap/" title= "【HTML/CSS】移动端之响应式布局与Bootstrap">
+                    <div class="nextTitle">【HTML/CSS】移动端之响应式布局与Bootstrap</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/%E5%86%99%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%9D/" title= "写给自己的一些话">
+                    <div class="prevTitle">写给自己的一些话</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -531,6 +616,24 @@ SQL的各种名词sql_mode&#x2F;SQL模式: 作用是规范SQL语句书写方式�
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Viewport-%E8%A7%86%E5%8F%A3"><span class="toc-number">1.</span> <span class="toc-text">Viewport 视口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#viewport-%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.1.</span> <span class="toc-text">viewport 设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E6%96%B9%E6%A1%88"><span class="toc-number">2.</span> <span class="toc-text">移动端适配方案</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E5%8E%9F%E5%88%99"><span class="toc-number">2.1.</span> <span class="toc-text">流式布局原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rem%E5%B8%83%E5%B1%80"><span class="toc-number">2.2.</span> <span class="toc-text">rem布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87JS"><span class="toc-number">2.2.1.</span> <span class="toc-text">通过JS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87vw"><span class="toc-number">2.2.2.</span> <span class="toc-text">通过vw</span></a></li></ol></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -931,6 +1034,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
